@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | PassportEase - Specialized Passport Application & Documentation Assistance</title>
+  <meta name="description" content="Explore our complete suite of passport assistance services: New Passport, Renewal, Tatkal Fast-Track, Minor Passports, Lost Replacement, Correction, and Appointment Booking.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23D4AF37'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z'/></svg>">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Custom Master CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Independent Disclaimer Bar -->
+  <div class="top-disclaimer-bar">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <div>
+        <i data-lucide="shield-alert" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:4px;color:var(--accent-gold);"></i>
+        <strong>Legal Notice:</strong> PassportEase is an independent, private documentation assistance consultancy and is NOT affiliated with any government department or official passport office.
+      </div>
+      <div class="top-bar-contact d-none d-md-flex align-items-center">
+        <span><i data-lucide="phone-call" style="width:12px;height:12px;display:inline-block;vertical-align:middle;margin-right:4px;"></i> Tatkal Helpline: +91 1800 212 9840</span>
+        <a href="mailto:support@passportease.in"><i data-lucide="mail" style="width:12px;height:12px;display:inline-block;vertical-align:middle;margin-right:4px;"></i> support@passportease.in</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Public Sticky Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand navbar-brand-wrapper" href="index.html">
+        <div class="brand-icon-box">
+          <i data-lucide="file-badge"></i>
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-title">Passport<span>Ease</span></span>
+          <span class="brand-sub">Documentation Assistance</span>
+        </div>
+      </a>
+
+      <!-- Hamburger Toggler (Single row on mobile & tablet <= 1024px) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarServicesContent" aria-controls="navbarServicesContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i data-lucide="menu" style="width:24px;height:24px;"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarServicesContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Home</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html"><i data-lucide="layout" class="me-2 text-primary" style="width:15px;height:15px;"></i> Home 1 (Classic Facilitation)</a></li>
+              <li><a class="dropdown-item" href="home-2.html"><i data-lucide="calendar-search" class="me-2 text-warning" style="width:15px;height:15px;"></i> Home 2 (Live Slot Finder & Concierge)</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link nav-link-custom active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="checklist.html">Documents Checklist</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html#feeCalculator">Fee Calculator</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-header-actions" id="navAuthActions">
+          <button class="btn btn-outline-secondary nav-icon-btn rtl-toggle-btn" title="Toggle RTL Direction" aria-label="Toggle RTL Direction">
+            <i data-lucide="languages"></i>
+          </button>
+          <button class="btn btn-outline-secondary nav-icon-btn theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+            <i data-lucide="moon"></i>
+          </button>
+          <button class="btn btn-outline-navy nav-icon-btn" data-bs-toggle="modal" data-bs-target="#trackApplicationModal" title="Track Application" aria-label="Track Application">
+            <i data-lucide="crosshair"></i>
+          </button>
+          <a href="auth.html" class="btn btn-navy nav-icon-btn" title="Client Login" aria-label="Client Login">
+            <i data-lucide="lock"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header Banner -->
+  <header class="py-5" style="background: var(--navy-gradient); color: #FFF; position: relative;">
+    <div class="container py-4 text-center" data-aos="fade-down">
+      <span class="badge-tag badge-tag-gold mb-3">Comprehensive Solutions</span>
+      <h1 class="display-5 fw-bold text-white mb-3">Our Passport Facilitation Services</h1>
+      <p class="text-white-50 mx-auto" style="max-width: 650px;">
+        Explore our 7 specialized assistance categories. From urgent Tatkal bookings to complex minor documentation, our experienced facilitators ensure seamless approvals.
+      </p>
+      <!-- Quick Service Jump Nav -->
+      <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
+        <a href="#new-passport" class="btn btn-sm btn-outline-light">New Passport</a>
+        <a href="#renewal-passport" class="btn btn-sm btn-outline-light">Renewal / Re-issue</a>
+        <a href="#tatkal-passport" class="btn btn-sm btn-outline-gold">Tatkal Urgent</a>
+        <a href="#lost-passport" class="btn btn-sm btn-outline-light">Lost / Damaged</a>
+        <a href="#correction-passport" class="btn btn-sm btn-outline-light">Data Correction</a>
+        <a href="#minor-passport" class="btn btn-sm btn-outline-light">Minor Passport</a>
+        <a href="#appointment-passport" class="btn btn-sm btn-outline-light">Appointment Booking</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Services Container -->
+  <main class="section-padding bg-light">
+    <div class="container">
+
+      <!-- SERVICE 1: New Passport Application -->
+      <section class="service-detail-card" id="new-passport" data-aos="fade-up">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5">
+            <img src="imahe/cytis-passport-2642171_1920.jpg" alt="New Passport Application Assistance" class="service-detail-img">
+          </div>
+          <div class="col-lg-7">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge bg-primary text-white">Service 01</span>
+              <span class="text-muted small">Fresh Application</span>
+            </div>
+            <h2 class="fw-bold mb-3">New Passport Application Assistance</h2>
+            <p class="text-muted">
+              Designed for first-time applicants of Indian citizenship. Our team assists with online dossier filing, applicant categorization, Non-ECR status eligibility checking, and scheduling your mandatory biometric appointment at your nearest PSK or POPSK.
+            </p>
+
+            <div class="row g-3 my-2">
+              <div class="col-sm-6">
+                <h6 class="fw-bold text-dark mb-2"><i data-lucide="check-circle" class="text-success me-1" style="width:16px;height:16px;"></i> Eligibility Criteria</h6>
+                <ul class="small text-muted ps-3 mb-0">
+                  <li>Indian citizens residing in India or abroad.</li>
+                  <li>Applicants without any existing Indian passport.</li>
+                  <li>Applicants aged 18 years and above.</li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <h6 class="fw-bold text-dark mb-2"><i data-lucide="clock" class="text-primary me-1" style="width:16px;height:16px;"></i> Estimated Timeline</h6>
+                <p class="small text-muted mb-0">
+                  <strong>Normal:</strong> 15 - 20 Business Days<br>
+                  <strong>Pre-Verification:</strong> Completed within 48h
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <span class="fw-bold small text-muted d-block mb-1">MANDATORY DOCUMENTS REQUIRED:</span>
+              <div class="doc-tag-list">
+                <span class="doc-tag">Proof of Date of Birth (Birth Cert / 10th Marksheet)</span>
+                <span class="doc-tag">Proof of Present Address (Aadhaar / Utility / Bank)</span>
+                <span class="doc-tag">Non-ECR Educational Certificate</span>
+                <span class="doc-tag">Self-Declaration Affidavit (Annexure E)</span>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mt-4 pt-3 border-top">
+              <div>
+                <span class="small text-muted d-block">Total Facilitation Package</span>
+                <strong class="fs-4 text-primary">₹2,499</strong> <small class="text-muted">(Includes ₹1,500 Govt Fee + ₹999 Assistance)</small>
+              </div>
+              <a href="auth.html" class="btn btn-gold">
+                <i data-lucide="arrow-right-circle"></i>
+                <span>Enquire & Apply for New Passport</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICE 2: Passport Renewal / Re-issue -->
+      <section class="service-detail-card" id="renewal-passport" data-aos="fade-up">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5 order-lg-2">
+            <img src="imahe/jackmac34-passport-3127927_1920.jpg" alt="Passport Renewal Assistance" class="service-detail-img">
+          </div>
+          <div class="col-lg-7 order-lg-1">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge bg-success text-white">Service 02</span>
+              <span class="text-muted small">Validity Re-issue</span>
+            </div>
+            <h2 class="fw-bold mb-3">Passport Renewal & Re-issue Assistance</h2>
+            <p class="text-muted">
+              Ideal for holders of passports that have expired or are due to expire within 12 months, or applicants whose 36/60-page visa booklets are exhausted. We ensure seamless booklet replacement while ensuring all existing valid visas remain active and undamaged.
+            </p>
+
+            <div class="row g-3 my-2">
+              <div class="col-sm-6">
+                <h6 class="fw-bold text-dark mb-2"><i data-lucide="check-circle" class="text-success me-1" style="width:16px;height:16px;"></i> Eligibility Criteria</h6>
+                <ul class="small text-muted ps-3 mb-0">
+                  <li>Existing passport valid for less than 1 year or expired.</li>
+                  <li>Booklet pages exhausted for frequent flyers.</li>
+                  <li>Change in appearance, signature, or address.</li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <h6 class="fw-bold text-dark mb-2"><i data-lucide="clock" class="text-primary me-1" style="width:16px;height:16px;"></i> Estimated Timeline</h6>
+                <p class="small text-muted mb-0">
+                  <strong>Normal Track:</strong> 10 - 15 Business Days<br>
+                  <strong>Tatkal Re-issue:</strong> 3 - 5 Business Days
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <span class="fw-bold small text-muted d-block mb-1">MANDATORY DOCUMENTS REQUIRED:</span>
+              <div class="doc-tag-list">
+                <span class="doc-tag">Original Old Passport Booklet</span>
+                <span class="doc-tag">Self-Attested Copies of 1st & Last 2 Pages</span>
+                <span class="doc-tag">Current Address Proof (if updated)</span>
+                <span class="doc-tag">Validity Expiry Explanation (if expired > 3 yrs)</span>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mt-4 pt-3 border-top">
+              <div>
+                <span class="small text-muted d-block">Renewal Assistance Package</span>
+                <strong class="fs-4 text-primary">₹2,499</strong> <small class="text-muted">(Standard 36 Pages)</small>
+              </div>
+              <a href="auth.html" class="btn btn-gold">
+                <i data-lucide="refresh-cw"></i>
+                <span>Enquire & Apply for Renewal</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICE 3: Tatkal Passport Assistance -->
+      <section class="service-detail-card" id="tatkal-passport" data-aos="fade-up" style="border: 2px solid #EF4444;">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5">
+            <img src="imahe/pamjpat-passport-2714675_1920.jpg" alt="Tatkal Urgent Passport Assistance" class="service-detail-img">
+          </div>
+          <div class="col-lg-7">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge bg-danger text-white">Service 03 • PRIORITY</span>
+              <span class="text-danger fw-bold small">Emergency Expedited Track</span>
+            </div>
+            <h2 class="fw-bold mb-3">Tatkal Urgent Passport Assistance</h2>
+            <p class="text-muted">
+              For urgent overseas job joining, critical medical treatments abroad, family emergencies, or unexpected business travel. We provide immediate dossier review, Annexure E drafting, and high-priority booking of early Tatkal appointment slots.
+            </p>
+
+            <div class="row g-3 my-2">
+              <div class="col-sm-6">
+                <h6 class="fw-bold text-dark mb-2"><i data-lucide="check-circle" class="text-success me-1" style="width:16px;height:16px;"></i> Eligibility Criteria</h6>
+                <ul class="small text-muted ps-3 mb-0">
+                  <li>Applicants without adverse police records.</li>
+                  <li>Applicants holding at least 2 verified national IDs.</li>
+                  <li>Clear documentary proof of Indian citizenship.</li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <h6 class="fw-bold text-dark mb-2"><i data-lucide="zap" class="text-danger me-1" style="width:16px;height:16px;"></i> Fast-Track Speed</h6>
+                <p class="small text-muted mb-0">
+                  <strong>Dispatch:</strong> 3 - 5 Business Days<br>
+                  <strong>Slot Confirmed:</strong> Within 24 - 48 Hours
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <span class="fw-bold small text-muted d-block mb-1">MANDATORY DOCUMENTS REQUIRED:</span>
+              <div class="doc-tag-list">
+                <span class="doc-tag">Annexure E Standard Affidavit</span>
+                <span class="doc-tag">Aadhaar Card with full DOB & Mobile link</span>
+                <span class="doc-tag">Secondary ID (Voter ID / Driving License / PAN)</span>
+                <span class="doc-tag">Proof of Urgent Travel (Flight ticket / Offer letter if asked)</span>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mt-4 pt-3 border-top">
+              <div>
+                <span class="small text-muted d-block">Tatkal Priority Package</span>
+                <strong class="fs-4 text-danger">₹5,299</strong> <small class="text-muted">(Includes ₹3,500 Govt Fee + ₹1,799 Expedited Assistance)</small>
+              </div>
+              <a href="auth.html" class="btn btn-gold">
+                <i data-lucide="zap"></i>
+                <span>Fast-Track Tatkal Application</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICE 4: Lost or Damaged Passport Guidance -->
+      <section class="service-detail-card" id="lost-passport" data-aos="fade-up">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5 order-lg-2">
+            <img src="imahe/mmamontov-passport-5037712_1920.jpg" alt="Lost or Damaged Passport Guidance" class="service-detail-img">
+          </div>
+          <div class="col-lg-7 order-lg-1">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge bg-warning text-dark">Service 04</span>
+              <span class="text-muted small">Replacement & Rectification</span>
+            </div>
+            <h2 class="fw-bold mb-3">Lost or Damaged Passport Guidance</h2>
+            <p class="text-muted">
+              Navigating a lost, misplaced, water-damaged, or torn passport can be legally delicate. We assist you with registering a police Missing Article / Non-Cognizable Report (NCR), preparing Annexure F declarations, and requesting duplicate booklet issuance.
+            </p>
+
+            <div class="row g-3 my-2">
+              <div class="col-sm-6">
+                <h6 class="fw-bold text-dark mb-2"><i data-lucide="check-circle" class="text-success me-1" style="width:16px;height:16px;"></i> Conditions Covered</h6>
+                <ul class="small text-muted ps-3 mb-0">
+                  <li>Passport completely lost, stolen, or misplaced.</li>
+                  <li>Passport mutilated beyond readability.</li>
+                  <li>Partial damage (e.g., covers detached, water soaked).</li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <h6 class="fw-bold text-dark mb-2"><i data-lucide="clock" class="text-primary me-1" style="width:16px;height:16px;"></i> Case Timeline</h6>
+                <p class="small text-muted mb-0">
+                  <strong>Estimated:</strong> 20 - 30 Business Days<br>
+                  (Requires mandatory prior police verification)
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <span class="fw-bold small text-muted d-block mb-1">MANDATORY DOCUMENTS REQUIRED:</span>
+              <div class="doc-tag-list">
+                <span class="doc-tag">Police Lost Certificate / Online NCR</span>
+                <span class="doc-tag">Annexure F Affidavit regarding circumstances of loss</span>
+                <span class="doc-tag">Damaged Booklet (if damaged rather than lost)</span>
+                <span class="doc-tag">Copy of previous passport (if available)</span>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mt-4 pt-3 border-top">
+              <div>
+                <span class="small text-muted d-block">Lost Passport Facilitation Package</span>
+                <strong class="fs-4 text-primary">₹4,499</strong> <small class="text-muted">(Includes ₹3,000 Govt Penalty Fee + ₹1,499 Assistance)</small>
+              </div>
+              <a href="auth.html" class="btn btn-gold">
+                <i data-lucide="help-circle"></i>
+                <span>Get Lost Case Guidance</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICE 5: Passport Information Correction -->
+      <section class="service-detail-card" id="correction-passport" data-aos="fade-up">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5">
+            <img src="imahe/kelly-sikkema-RiUZQOfQ8XE-unsplash.jpg" alt="Passport Information Correction" class="service-detail-img">
+          </div>
+          <div class="col-lg-7">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge bg-info text-white">Service 05</span>
+              <span class="text-muted small">Data Modification</span>
+            </div>
+            <h2 class="fw-bold mb-3">Passport Information Correction Assistance</h2>
+            <p class="text-muted">
+              Resolve mismatches in full name spelling, date of birth, place of birth, parents' names, marital status additions (spouse name endorsement), or post-marriage surname changes with precision legal documentation.
+            </p>
+
+            <div class="row g-3 my-2">
+              <div class="col-sm-6">
+                <h6 class="fw-bold text-dark mb-2"><i data-lucide="check-circle" class="text-success me-1" style="width:16px;height:16px;"></i> Common Corrections</h6>
+                <ul class="small text-muted ps-3 mb-0">
+                  <li>Spelling rectification matching 10th Certificate.</li>
+                  <li>Addition or deletion of spouse name.</li>
+                  <li>Major change in name via Gazette Notification.</li>
+                  <li>Residential address correction.</li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <h6 class="fw-bold text-dark mb-2"><i data-lucide="clock" class="text-primary me-1" style="width:16px;height:16px;"></i> Processing Timeline</h6>
+                <p class="small text-muted mb-0">
+                  <strong>Estimated:</strong> 15 - 22 Business Days<br>
+                  (Includes statutory gazette/affidavit review)
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <span class="fw-bold small text-muted d-block mb-1">MANDATORY DOCUMENTS REQUIRED:</span>
+              <div class="doc-tag-list">
+                <span class="doc-tag">Original Existing Passport</span>
+                <span class="doc-tag">Marriage Certificate (for spouse name endorsement)</span>
+                <span class="doc-tag">State / Central Gazette Copy (for major name changes)</span>
+                <span class="doc-tag">Two Daily Newspaper Clippings (if major change)</span>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mt-4 pt-3 border-top">
+              <div>
+                <span class="small text-muted d-block">Correction Facilitation Package</span>
+                <strong class="fs-4 text-primary">₹2,699</strong> <small class="text-muted">(Standard Government + Legal Assistance)</small>
+              </div>
+              <a href="auth.html" class="btn btn-gold">
+                <i data-lucide="edit-3"></i>
+                <span>Enquire & Rectify Information</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICE 6: Minor Passport Assistance -->
+      <section class="service-detail-card" id="minor-passport" data-aos="fade-up">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5 order-lg-2">
+            <img src="imahe/charlotte-noelle-98WPMlTl5xo-unsplash.jpg" alt="Minor Passport Assistance" class="service-detail-img">
+          </div>
+          <div class="col-lg-7 order-lg-1">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge bg-secondary text-white">Service 06</span>
+              <span class="text-muted small">Ages 0 to 18</span>
+            </div>
+            <h2 class="fw-bold mb-3">Minor Passport Assistance (Under 18 Years)</h2>
+            <p class="text-muted">
+              Applying for infants and children under 18 involves unique parental consent protocols. We handle Annexure D declarations, single-parent consent affidavits (Annexure C), child birth certification, and school bonafide records.
+            </p>
+
+            <div class="row g-3 my-2">
+              <div class="col-sm-6">
+                <h6 class="fw-bold text-dark mb-2"><i data-lucide="check-circle" class="text-success me-1" style="width:16px;height:16px;"></i> Validity Rules</h6>
+                <ul class="small text-muted ps-3 mb-0">
+                  <li>Children aged 0 - 15: Issued 5-year validity.</li>
+                  <li>Teens aged 15 - 18: Can opt for 10-year adult validity.</li>
+                  <li>Both parents' consent or legal custody order required.</li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <h6 class="fw-bold text-dark mb-2"><i data-lucide="clock" class="text-primary me-1" style="width:16px;height:16px;"></i> Estimated Timeline</h6>
+                <p class="small text-muted mb-0">
+                  <strong>Estimated:</strong> 12 - 18 Business Days<br>
+                  (Often exempt from physical police verification)
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <span class="fw-bold small text-muted d-block mb-1">MANDATORY DOCUMENTS REQUIRED:</span>
+              <div class="doc-tag-list">
+                <span class="doc-tag">Certified Municipal Birth Certificate</span>
+                <span class="doc-tag">Passports of Both Parents (Self-attested copies)</span>
+                <span class="doc-tag">Parental Consent Affidavit (Annexure D)</span>
+                <span class="doc-tag">Parent Present Address Proof</span>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mt-4 pt-3 border-top">
+              <div>
+                <span class="small text-muted d-block">Minor Assistance Package</span>
+                <strong class="fs-4 text-primary">₹1,899</strong> <small class="text-muted">(Includes ₹1,000 Govt Fee + ₹899 Assistance)</small>
+              </div>
+              <a href="auth.html" class="btn btn-gold">
+                <i data-lucide="heart"></i>
+                <span>Enquire & Apply for Minor</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICE 7: Appointment Booking Assistance -->
+      <section class="service-detail-card" id="appointment-passport" data-aos="fade-up">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5">
+            <img src="imahe/kit-formerly-convertkit-htQznS-Rx7w-unsplash.jpg" alt="Appointment Booking Assistance" class="service-detail-img">
+          </div>
+          <div class="col-lg-7">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge bg-dark text-white">Service 07</span>
+              <span class="text-muted small">Slot Scheduling & Rescheduling</span>
+            </div>
+            <h2 class="fw-bold mb-3">Appointment Booking & Concierge Assistance</h2>
+            <p class="text-muted">
+              Already have an application filled but struggling to get a timely appointment slot at your city's PSK? Our automated booking desk constantly tracks slot release quotas and cancellations to secure your earliest convenient appointment date.
+            </p>
+
+            <div class="row g-3 my-2">
+              <div class="col-sm-6">
+                <h6 class="fw-bold text-dark mb-2"><i data-lucide="check-circle" class="text-success me-1" style="width:16px;height:16px;"></i> Coverage Details</h6>
+                <ul class="small text-muted ps-3 mb-0">
+                  <li>37+ Regional Passport Offices (RPO).</li>
+                  <li>Over 93 Passport Seva Kendras (PSK).</li>
+                  <li>400+ Post Office Passport Seva Kendras (POPSK).</li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <h6 class="fw-bold text-dark mb-2"><i data-lucide="clock" class="text-primary me-1" style="width:16px;height:16px;"></i> Slot Availability</h6>
+                <p class="small text-muted mb-0">
+                  <strong>Normal Slots:</strong> Booked within 48h<br>
+                  <strong>Tatkal Slots:</strong> Priority same-week release
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <span class="fw-bold small text-muted d-block mb-1">INCLUDED CONCIERGE PERKS:</span>
+              <div class="doc-tag-list">
+                <span class="doc-tag">Real-Time Quota Monitoring</span>
+                <span class="doc-tag">Up to 3 Rescheduling Attempts Included</span>
+                <span class="doc-tag">Print-Ready Appointment Slip Generation</span>
+                <span class="doc-tag">Pre-Appointment Checklist Dossier</span>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mt-4 pt-3 border-top">
+              <div>
+                <span class="small text-muted d-block">Booking Assistance Standalone Fee</span>
+                <strong class="fs-4 text-primary">₹699</strong> <small class="text-muted">(Per Individual Applicant)</small>
+              </div>
+              <a href="auth.html" class="btn btn-gold">
+                <i data-lucide="calendar"></i>
+                <span>Book Appointment Slot Help</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Brand Info -->
+        <div class="col-lg-4 col-md-6">
+          <div class="navbar-brand-wrapper mb-3">
+            <div class="brand-icon-box">
+              <i data-lucide="file-badge"></i>
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-title text-white">Passport<span>Ease</span></span>
+              <span class="brand-sub text-white-50">DOCUMENTATION FACILITATION</span>
+            </div>
+          </div>
+          <p class="text-white-70 small mb-3" style="color: #CBD5E1 !important; line-height: 1.6;">
+            PassportEase is India's premier independent passport facilitation service. We simplify paperwork, eliminate errors, and guide applicants smoothly through appointment scheduling and document verification.
+          </p>
+          <div class="social-links mt-3">
+            <a href="https://linkedin.com" target="_blank" class="social-btn" aria-label="LinkedIn" title="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-btn" aria-label="Twitter" title="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" class="social-btn" aria-label="Facebook" title="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram" title="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pages Column -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-heading text-white">Pages</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1 (Classic)</a></li>
+            <li><a href="home-2.html">Home 2 (Slot Radar)</a></li>
+            <li><a href="services.html">All Services</a></li>
+            <li><a href="checklist.html">Documents Checklist</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="auth.html">Client Portal Login</a></li>
+          </ul>
+        </div>
+
+        <!-- Our Services Column -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-heading text-white">Our Services</h5>
+          <ul class="footer-links">
+            <li><a href="services.html#tatkal-passport">Tatkal Fast-Track</a></li>
+            <li><a href="services.html#renewal-passport">Passport Renewal</a></li>
+            <li><a href="services.html#new-passport">New Passport Application</a></li>
+            <li><a href="services.html#minor-passport">Minor Child Passport</a></li>
+            <li><a href="services.html#lost-passport">Lost Passport Guidance</a></li>
+          </ul>
+        </div>
+
+        <!-- Emergency Hotline Column -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-heading text-white">Emergency Hotline</h5>
+          <div class="mb-2 small" style="color: #CBD5E1 !important;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2" style="display:inline-block;vertical-align:middle;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span style="color: #E2E8F0;">Toll-Free:</span> <a href="tel:+9118002129840" class="text-white fw-bold" style="color: #FFFFFF !important; text-decoration: none;">+91 1800 212 9840</a>
+          </div>
+          <div class="mb-3 small" style="color: #CBD5E1 !important;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2" style="display:inline-block;vertical-align:middle;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span style="color: #E2E8F0;">Email:</span> <a href="mailto:support@passportease.in" class="text-white" style="color: #FFFFFF !important; text-decoration: underline;">support@passportease.in</a>
+          </div>
+          <div class="p-3 rounded border small" style="background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.18) !important;">
+            <strong style="color: #FBBF24 !important;">Tatkal Escalation Desk:</strong><br>
+            <span style="color: #CBD5E1 !important;">24/7 coverage for urgent overseas business & emergency travel.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statutory Disclaimer Box -->
+      <div class="footer-disclaimer-box mt-4 p-3 rounded" style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); color: #CBD5E1 !important; font-size: 0.82rem; line-height: 1.6;">
+        <strong style="color: #FBBF24;">IMPORTANT STATUTORY DISCLAIMER:</strong> PassportEase is an independent, private documentation assistance and facilitation consultancy. We are NOT an official government agency, passport office, or affiliated with the Ministry of External Affairs, Government of India. The official portal of the Government of India for passport applications is passportindia.gov.in. Fees charged by PassportEase are purely for consultation, form compilation, document pre-audit, and appointment assistance services.
+      </div>
+
+      <!-- Footer Bottom Row -->
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2 pt-3 mt-3 border-top" style="border-color: rgba(255, 255, 255, 0.12) !important;">
+        <div style="color: #CBD5E1 !important; font-size: 0.85rem;">
+          © 2026 PassportEase Facilitation Services Ltd. All rights reserved.
+        </div>
+        <div class="d-flex gap-3" style="font-size: 0.85rem;">
+          <a href="#" style="color: #CBD5E1 !important; text-decoration: none;">Privacy Policy</a>
+          <a href="#" style="color: #CBD5E1 !important; text-decoration: none;">Terms of Service</a>
+          <a href="#" style="color: #CBD5E1 !important; text-decoration: none;">Refund & Cancellation</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Track Modal -->
+  <div class="modal fade" id="trackApplicationModal" tabindex="-1" aria-labelledby="trackModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-header modal-header-navy">
+          <h5 class="modal-title" id="trackModalLabel">Track Your Assistance File</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="text-muted small">Enter your PassportEase Reference Number (e.g. <strong>PE-2026-98421</strong>) to view real-time case progress.</p>
+          <form id="publicTrackForm">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" id="trackRefNumber" value="PE-2026-98421" required>
+              <button class="btn btn-navy" type="submit">Track Status</button>
+            </div>
+          </form>
+          <div id="trackResultArea"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

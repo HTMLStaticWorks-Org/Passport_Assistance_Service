@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PassportEase | Independent Passport Application & Documentation Assistance</title>
+  <meta name="description"
+    content="Premium passport documentation assistance, renewal support, Tatkal guidance, and appointment booking facilitation across India.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23D4AF37'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z'/></svg>">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Custom Master CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- 1. Top Independent Disclaimer Bar -->
+  <div class="top-disclaimer-bar">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <div>
+        <i data-lucide="shield-alert"
+          style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:4px;color:var(--accent-gold);"></i>
+        <strong>Legal Notice:</strong> PassportEase is an independent, private documentation assistance consultancy and
+        is NOT affiliated with any government department or official passport office.
+      </div>
+      <div class="top-bar-contact d-none d-md-flex align-items-center">
+        <span><i data-lucide="phone-call"
+            style="width:12px;height:12px;display:inline-block;vertical-align:middle;margin-right:4px;"></i> Tatkal
+          Helpline: +91 1800 212 9840</span>
+        <a href="mailto:support@passportease.in"><i data-lucide="mail"
+            style="width:12px;height:12px;display:inline-block;vertical-align:middle;margin-right:4px;"></i>
+          support@passportease.in</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Public Sticky Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <!-- Clickable Logo -->
+      <a class="navbar-brand navbar-brand-wrapper" href="index.html">
+        <div class="brand-icon-box">
+          <i data-lucide="file-badge"></i>
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-title">Passport<span>Ease</span></span>
+          <span class="brand-sub">Documentation Assistance</span>
+        </div>
+      </a>
+
+      <!-- Hamburger Toggler (Visible at <= 1024px, 768px, 360px on the same row) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPublicContent"
+        aria-controls="navbarPublicContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i data-lucide="menu" style="width:24px;height:24px;"></i>
+      </button>
+
+      <!-- Nav Links & CTA Actions -->
+      <div class="collapse navbar-collapse" id="navbarPublicContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link nav-link-custom dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span>Home</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="index.html"><i data-lucide="layout" class="me-2 text-primary"
+                    style="width:15px;height:15px;"></i> Home 1 (Classic Facilitation)</a></li>
+              <li><a class="dropdown-item" href="home-2.html"><i data-lucide="calendar-search" class="me-2 text-warning"
+                    style="width:15px;height:15px;"></i> Home 2 (Live Slot Finder & Concierge)</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="checklist.html">Documents Checklist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#feeCalculator">Fee Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="contact.html">Contact</a>
+          </li>
+        </ul>
+
+        <div class="nav-header-actions" id="navAuthActions">
+          <button class="btn btn-outline-secondary nav-icon-btn rtl-toggle-btn" title="Toggle RTL Direction" aria-label="Toggle RTL Direction">
+            <i data-lucide="languages"></i>
+          </button>
+          <button class="btn btn-outline-secondary nav-icon-btn theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+            <i data-lucide="moon"></i>
+          </button>
+          <button class="btn btn-outline-navy nav-icon-btn" data-bs-toggle="modal" data-bs-target="#trackApplicationModal" title="Track Application" aria-label="Track Application">
+            <i data-lucide="crosshair"></i>
+          </button>
+          <a href="auth.html" class="btn btn-navy nav-icon-btn" title="Client Login" aria-label="Client Login">
+            <i data-lucide="lock"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 3. Hero Section with Video Background & Visual Showcase -->
+  <section class="hero-section">
+    <!-- Subtle Video Background overlay -->
+    <video autoplay muted loop playsinline class="hero-video-bg">
+      <source src="v/4872891-hd_1920_1080_25fps.mp4" type="video/mp4">
+    </video>
+    <div class="hero-bg-overlay"></div>
+
+    <div class="container position-relative" style="z-index: 2;">
+      <div class="row align-items-center g-5">
+        <!-- Hero Text -->
+        <div class="col-lg-7" data-aos="fade-right">
+          <div class="hero-badge">
+            <i data-lucide="shield-check"></i>
+            <span>ISO 9001 Certified Documentation Quality • 99.4% Approval</span>
+          </div>
+
+          <h1 class="hero-title">
+            Your Passport Journey, <br>
+            <span class="gold-gradient-text">Made Simple.</span>
+          </h1>
+
+          <p class="hero-desc">
+            Skip bureaucratic bottlenecks, document rejections, and appointment delays. PassportEase delivers end-to-end
+            professional assistance for new applications, renewals, and urgent Tatkal slots.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="services.html" class="btn btn-gold btn-lg">
+              <i data-lucide="file-signature"></i>
+              <span>Apply for Assistance</span>
+            </a>
+            <button class="btn btn-outline-gold btn-lg" data-bs-toggle="modal" data-bs-target="#trackApplicationModal">
+              <i data-lucide="search"></i>
+              <span>Track Application</span>
+            </button>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="hero-trust-badges">
+            <div class="trust-item">
+              <i data-lucide="check-circle-2"></i>
+              <span>100% Error-Free Guarantee</span>
+            </div>
+            <div class="trust-item">
+              <i data-lucide="clock"></i>
+              <span>48-Hour Tatkal Slots</span>
+            </div>
+            <div class="trust-item">
+              <i data-lucide="lock"></i>
+              <span>Encrypted Client Vault</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase -->
+        <div class="col-lg-5" data-aos="fade-left" data-aos-delay="150">
+          <div class="hero-media-wrapper">
+            <!-- Floating Pill 1 -->
+            <div class="floating-pill floating-pill-top">
+              <div class="floating-pill-icon">
+                <i data-lucide="file-check"></i>
+              </div>
+              <div>
+                <strong class="d-block text-white" style="font-size:0.88rem;">Dossier Verified</strong>
+                <span class="text-white-50" style="font-size:0.75rem;">0 Discrepancy Found</span>
+              </div>
+            </div>
+
+            <!-- Main Hero Image from imahe/ -->
+            <div class="hero-main-card">
+              <img src="imahe/cytis-passport-2642171_1920.jpg" alt="PassportEase Documentation Facilitation"
+                loading="lazy">
+            </div>
+
+            <!-- Floating Pill 2 -->
+            <div class="floating-pill floating-pill-bottom">
+              <div class="floating-pill-icon">
+                <i data-lucide="calendar-check"></i>
+              </div>
+              <div>
+                <strong class="d-block text-white" style="font-size:0.88rem;">PSK Slot Confirmed</strong>
+                <span class="text-white-50" style="font-size:0.75rem;">Tatkal Priority Fast-Track</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Stats Ticker Section -->
+  <section class="stats-ticker-section">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <div class="stat-number">18,500<span>+</span></div>
+            <div class="stat-label">Passports Facilitated</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <div class="stat-number">99.4<span>%</span></div>
+            <div class="stat-label">First-Time Approval Rate</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <div class="stat-number">48<span>h</span></div>
+            <div class="stat-label">Tatkal Slot Assistance</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <div class="stat-number">4.9<span>★</span></div>
+            <div class="stat-label">Client Rating (2,400+ reviews)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 3-Step Application Process -->
+  <section class="section-padding" style="background-color: #F8FAFC;">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Effortless Facilitation</span>
+        <h2 class="section-title">How PassportEase Works In 3 Steps</h2>
+        <p class="section-desc">We replace confusion, queues, and document ambiguities with a structured, verified
+          assistance roadmap.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Step 1 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-card">
+            <span class="step-number-watermark">01</span>
+            <div class="step-icon-box">
+              <i data-lucide="file-up"></i>
+            </div>
+            <h4>1. Select Service & Upload</h4>
+            <p>Choose your required service (Renewal, Fresh, Tatkal, or Minor) and upload your identity proofs directly
+              into your private client vault.</p>
+            <div class="mt-3">
+              <a href="checklist.html" class="small fw-bold text-primary">View Documents Checklist →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-card">
+            <span class="step-number-watermark">02</span>
+            <div class="step-icon-box">
+              <i data-lucide="check-check"></i>
+            </div>
+            <h4>2. Expert Audit & Form Filing</h4>
+            <p>Our senior passport legal specialists conduct a rigorous 14-point audit to eliminate name discrepancies,
+              seal omissions, and invalid formats.</p>
+            <div class="mt-3">
+              <span class="badge bg-success-subtle text-success">Zero Rejection Guarantee</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-card">
+            <span class="step-number-watermark">03</span>
+            <div class="step-icon-box">
+              <i data-lucide="compass"></i>
+            </div>
+            <h4>3. Slot Booking & Guidance</h4>
+            <p>We secure your preferred Passport Seva Kendra (PSK) appointment slot, provide an appointment dossier, and
+              offer physical escort guidance.</p>
+            <div class="mt-3">
+              <a href="auth.html" class="small fw-bold text-primary">Track In Client Portal →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Popular Assistance Services -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Our Specializations</span>
+        <h2 class="section-title">Popular Passport Assistance Services</h2>
+        <p class="section-desc">Tailored facilitation solutions designed for individuals, corporate travelers, and
+          families.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Service 1: New Application -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card">
+            <div class="service-card-img-wrap">
+              <img src="imahe/cytis-passport-2642171_1920.jpg" alt="New Passport Assistance" loading="lazy">
+              <span class="service-card-badge">Fresh Issuance</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">New Passport Application</h3>
+              <p class="service-card-text">Comprehensive assistance for first-time applicants. Complete dossier
+                preparation, Non-ECR qualification review, and PSK booking.</p>
+              <div class="service-card-meta">
+                <span class="service-time"><i data-lucide="clock"></i> 15 - 20 Business Days</span>
+                <a href="services.html#new-passport" class="btn btn-outline-navy btn-sm">Explore </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2: Renewal -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card">
+            <div class="service-card-img-wrap">
+              <img src="imahe/jackmac34-passport-3127927_1920.jpg" alt="Passport Renewal Assistance" loading="lazy">
+              <span class="service-card-badge">Fast-Track Renewal</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Passport Renewal / Re-issue</h3>
+              <p class="service-card-text">Expiring validity, booklet exhaustion, or address update. Seamless reissue
+                handling with retention of existing travel visas.</p>
+              <div class="service-card-meta">
+                <span class="service-time"><i data-lucide="clock"></i> 10 - 15 Business Days</span>
+                <a href="services.html#renewal-passport" class="btn btn-outline-navy btn-sm">Explore </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3: Tatkal -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card">
+            <div class="service-card-img-wrap">
+              <img src="imahe/pamjpat-passport-2714675_1920.jpg" alt="Tatkal Passport Guidance" loading="lazy">
+              <span class="service-card-badge" style="background:#EF4444;color:#FFF;">Priority Tatkal</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Tatkal Urgent Passport</h3>
+              <p class="service-card-text">Critical emergency travel support. Immediate Annexure E compilation, urgent
+                slot reservation, and same-week passport dispatch.</p>
+              <div class="service-card-meta">
+                <span class="service-time"><i data-lucide="zap"></i> 3 - 5 Business Days</span>
+                <a href="services.html#tatkal-passport" class="btn btn-outline-navy btn-sm">Explore </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4: Minor Passport -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card">
+            <div class="service-card-img-wrap">
+              <img src="imahe/charlotte-noelle-98WPMlTl5xo-unsplash.jpg" alt="Minor Passport Assistance" loading="lazy">
+              <span class="service-card-badge">Children & Teens</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Minor Passport Assistance</h3>
+              <p class="service-card-text">Specialized guidance for infants and minors under 18. Parental consent
+                Annexures C & D handling and single parent facilitation.</p>
+              <div class="service-card-meta">
+                <span class="service-time"><i data-lucide="clock"></i> 12 - 18 Business Days</span>
+                <a href="services.html#minor-passport" class="btn btn-outline-navy btn-sm">Explore </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 5: Lost / Damaged -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card">
+            <div class="service-card-img-wrap">
+              <img src="imahe/mmamontov-passport-5037712_1920.jpg" alt="Lost or Damaged Passport Guidance"
+                loading="lazy">
+              <span class="service-card-badge">Replacement Case</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Lost or Damaged Guidance</h3>
+              <p class="service-card-text">Assistance with Police Missing Non-Cognizable Reports (NCR), damaged passport
+                affidavits, and urgent duplicate booklet petitions.</p>
+              <div class="service-card-meta">
+                <span class="service-time"><i data-lucide="alert-circle"></i> Case-Specific</span>
+                <a href="services.html#lost-passport" class="btn btn-outline-navy btn-sm">Explore </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 6: Correction / Update -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card">
+            <div class="service-card-img-wrap">
+              <img src="imahe/kelly-sikkema-RiUZQOfQ8XE-unsplash.jpg" alt="Passport Information Correction"
+                loading="lazy">
+              <span class="service-card-badge">Data Update</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Information Correction</h3>
+              <p class="service-card-text">Rectification of misspelled names, marital status additions/removals, spouse
+                endorsements, and permanent address changes.</p>
+              <div class="service-card-meta">
+                <span class="service-time"><i data-lucide="file-edit"></i> 14 - 20 Business Days</span>
+                <a href="services.html#correction-passport" class="btn btn-outline-navy btn-sm">Explore </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="services.html" class="btn btn-navy btn-lg">
+          <span>View All 7 Comprehensive Services & Packages</span>
+          <i data-lucide="arrow-right" class="ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Why Choose PassportEase Section -->
+  <section class="section-padding why-choose-section" style="background-color: #F8FAFC;">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="section-subtitle">Why Choose Us</span>
+          <h2 class="section-title">The Industry Standard in Passport Documentation Facilitation</h2>
+          <p class="section-desc">Government passport rules are strict. Even a missing dot in an address proof or an
+            unvalidated digital signature can trigger application rejection. PassportEase eliminates that friction
+            entirely.</p>
+
+          <div class="row g-3 mt-2">
+            <div class="col-sm-6">
+              <div class="feature-box">
+                <div class="feature-icon-circle">
+                  <i data-lucide="shield-check"></i>
+                </div>
+                <h5 class="fw-bold">Zero-Error Assurance</h5>
+                <p class="small text-muted mb-0">Every annexure, proof, and spelling audited before final appointment
+                  submission.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="feature-box">
+                <div class="feature-icon-circle">
+                  <i data-lucide="user-check"></i>
+                </div>
+                <h5 class="fw-bold">Dedicated Case Officer</h5>
+                <p class="small text-muted mb-0">Direct phone and WhatsApp access to a senior documentation consultant.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="feature-box">
+                <div class="feature-icon-circle">
+                  <i data-lucide="zap"></i>
+                </div>
+                <h5 class="fw-bold">Expedited Slot Finder</h5>
+                <p class="small text-muted mb-0">We monitor PSK slot releases 24/7 to snag earliest cancellations and
+                  appointments.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="feature-box">
+                <div class="feature-icon-circle">
+                  <i data-lucide="lock"></i>
+                </div>
+                <h5 class="fw-bold">Confidential & Secure</h5>
+                <p class="small text-muted mb-0">Documents stored in high-encryption digital lockers with automated
+                  purging.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="position-relative">
+            <img src="imahe/pexels-jakubzerdzicki-33497885.jpg" alt="Passport Assistance Specialists"
+              class="img-fluid rounded-4 shadow-xl" style="height: 520px; width: 100%; object-fit: cover;">
+            <div class="bg-white p-4 rounded-3 shadow-lg position-absolute bottom-0 start-0 m-4 border border-warning"
+              style="max-width: 320px;">
+              <div class="d-flex align-items-center gap-3">
+                <div class="bg-success text-white p-2 rounded-circle">
+                  <i data-lucide="award" style="width:24px;height:24px;"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-0 text-dark">Independent Excellence</h6>
+                  <span class="small text-muted">Over 10 Years Facilitating Indian & Overseas Passports</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Interactive Fee & Timeline Calculator Widget -->
+  <section class="section-padding bg-white" id="feeCalculator">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Transparent Pricing</span>
+        <h2 class="section-title">Passport Fee & Timeline Estimator</h2>
+        <p class="section-desc">Calculate official statutory government passport fees alongside our comprehensive
+          facilitation charges with zero hidden fees.</p>
+      </div>
+
+      <div class="calculator-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4 align-items-stretch">
+          <!-- Inputs Column -->
+          <div class="col-lg-7">
+            <h4 class="fw-bold mb-4">Configure Your Application Parameters</h4>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold small text-muted">SELECT SERVICE TYPE</label>
+              <select class="form-select form-select-lg" id="calcServiceType">
+                <option value="new" selected>Fresh / New Passport Application</option>
+                <option value="renewal">Passport Renewal / Re-issue</option>
+                <option value="tatkal">Tatkal Urgent Fast-Track</option>
+                <option value="minor">Minor Passport (Below 18 years)</option>
+                <option value="lost">Lost / Damaged Passport Replacement</option>
+                <option value="correction">Information / Name / Address Correction</option>
+              </select>
+            </div>
+
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label class="form-label fw-bold small text-muted">BOOKLET PAGE SIZE</label>
+                <select class="form-select" id="calcBookletType">
+                  <option value="36" selected>Standard (36 Pages)</option>
+                  <option value="60">Jumbo Booklet (60 Pages)</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-bold small text-muted">PROCESSING SPEED SCHEME</label>
+                <select class="form-select" id="calcSpeed">
+                  <option value="normal" selected>Normal Facilitation</option>
+                  <option value="tatkal">Tatkal Priority Track</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="p-3 bg-light rounded-3 border small text-muted">
+              <i data-lucide="info" class="me-1 text-primary"
+                style="width:14px;height:14px;display:inline-block;vertical-align:middle;"></i>
+              <strong>Note:</strong> Official statutory passport fees are paid directly to the Ministry of External
+              Affairs portal. Our assistance fee covers end-to-end form compilation, document auditing, appointment
+              priority booking, and casework support.
+            </div>
+          </div>
+
+          <!-- Output Display Column -->
+          <div class="col-lg-5">
+            <div class="calc-result-box">
+              <div>
+                <span class="badge bg-warning text-dark px-3 py-1 fw-bold">Live Breakdown</span>
+                <div class="calc-price-display" id="calcTotalFee">₹2,499</div>
+                <div class="small text-white-50">Estimated Total Investment</div>
+              </div>
+
+              <div class="my-3">
+                <div class="calc-breakdown-row">
+                  <span>Statutory Government Fee</span>
+                  <strong class="text-white" id="calcGovtFee">₹1,500</strong>
+                </div>
+                <div class="calc-breakdown-row">
+                  <span>PassportEase Assistance Fee</span>
+                  <strong class="text-white" id="calcAssistFee">₹999</strong>
+                </div>
+                <div class="calc-breakdown-row">
+                  <span>Estimated Processing Timeline</span>
+                  <strong class="text-warning" id="calcTimeline">15 - 20 Business Days</strong>
+                </div>
+              </div>
+
+              <div>
+                <a href="auth.html" class="btn btn-gold w-100 justify-content-center">
+                  <span>Start This Application Now</span>
+                  <i data-lucide="arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Customer Testimonials (Swiper.js) -->
+  <section class="section-padding testimonials-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Client Experiences</span>
+        <h2 class="section-title">Trusted by Thousands Across India</h2>
+        <p class="section-desc">Read genuine reviews from travelers, students, and professionals who simplified their
+          passport applications.</p>
+      </div>
+
+      <div class="swiper testimonials-swiper" data-aos="fade-up" data-aos-delay="150">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div>
+                <div class="stars-rating">★★★★★</div>
+                <p class="testimonial-quote">
+                  "I was facing urgent travel to London for a project handover and discovered my passport had expired.
+                  PassportEase guided my Tatkal file seamlessly. Got my appointment booked in 36 hours and the booklet
+                  arrived in 4 days!"
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img src="imahe/agus-dietrich-eUjufrdx_bM-unsplash.jpg" alt="Rohan Singhania" class="testimonial-avatar"
+                  loading="lazy">
+                <div>
+                  <div class="author-name">Rohan Singhania</div>
+                  <div class="author-location">Senior Software Architect, Bengaluru</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div>
+                <div class="stars-rating">★★★★★</div>
+                <p class="testimonial-quote">
+                  "Applying for my newborn daughter's passport seemed daunting with all the parental consent annexures.
+                  Anita from the facilitation team checked every document beforehand. Zero hurdles at the PSK counter."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img src="imahe/alexa-m-OqDx0pa6VXI-unsplash.jpg" alt="Dr. Meera Nambiar" class="testimonial-avatar"
+                  loading="lazy">
+                <div>
+                  <div class="author-name">Dr. Meera Nambiar</div>
+                  <div class="author-location">Pediatrician, Kochi</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div>
+                <div class="stars-rating">★★★★★</div>
+                <p class="testimonial-quote">
+                  "I had a complicated spelling discrepancy between my 10th marksheet and Aadhaar card. PassportEase
+                  drafted the precise Annexure E affidavit and guided me on the Gazette notification. True lifesavers!"
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img src="imahe/pexels-dewnette-30851143.jpg" alt="Vikramaditya Verma" class="testimonial-avatar"
+                  loading="lazy">
+                <div>
+                  <div class="author-name">Vikramaditya Verma</div>
+                  <div class="author-location">Business Owner, New Delhi</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div>
+                <div class="stars-rating">★★★★★</div>
+                <p class="testimonial-quote">
+                  "The Client Dashboard is phenomenal! You can track every step from review to appointment and upload
+                  documents with ease. The customer service response time is under 10 minutes."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img src="imahe/nicole-geri-gMJ3tFOLvnA-unsplash.jpg" alt="Ananya Deshmukh" class="testimonial-avatar"
+                  loading="lazy">
+                <div>
+                  <div class="author-name">Ananya Deshmukh</div>
+                  <div class="author-location">Marketing Director, Mumbai</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-pagination mt-4"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Frequently Asked Questions (Accordion) -->
+  <section class="section-padding" style="background-color: #F8FAFC;" id="faqSection">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">Clear answers to help you navigate your passport application process smoothly.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-9" data-aos="fade-up" data-aos-delay="100">
+          <div class="accordion accordion-custom" id="faqAccordion">
+            <!-- FAQ 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHead1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1"
+                  aria-expanded="true" aria-controls="faqCollapse1">
+                  Is PassportEase an official government passport office?
+                </button>
+              </h2>
+              <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHead1"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  No. <strong>PassportEase is a private, independent documentation consultancy and facilitation
+                    agency.</strong> We are not affiliated with the Ministry of External Affairs or any government body.
+                  We assist applicants in compiling, auditing, and submitting their applications error-free, reserving
+                  verified appointment slots, and guiding them through physical verification steps. Official passport
+                  issuance remains the sole prerogative of the competent government authorities.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHead2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                  What is the difference between Normal and Tatkal passport assistance?
+                </button>
+              </h2>
+              <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHead2"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Normal passport processing typically takes 15 to 20 working days with police verification conducted
+                  prior to passport dispatch. Tatkal is an expedited emergency scheme where passports are printed and
+                  dispatched within 3 to 5 working days, often with post-police verification. Tatkal requires additional
+                  documentary proof (e.g. Annexure E and two verified identity proofs) and carries a higher government
+                  fee.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHead3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                  Do I still need to visit the Passport Seva Kendra (PSK) in person?
+                </button>
+              </h2>
+              <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHead3"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes. Government biometric regulations mandate that every applicant (including minors) must appear in
+                  person at the Passport Seva Kendra (PSK) or Post Office PSK (POPSK) for live biometric capture
+                  (fingerprints and live digital photograph). PassportEase prepares your entire dossier, books your
+                  slot, and provides a comprehensive appointment slip so your visit is swift, organized, and without
+                  documentary rejection.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHead4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                  What documents are mandatory for renewal of an expired passport?
+                </button>
+              </h2>
+              <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHead4"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  For standard passport renewal, you must present:
+                  <ul class="mt-2 mb-0">
+                    <li>Your original old passport booklet (for cancellation and return).</li>
+                    <li>Self-attested photocopies of the first two and last two pages of your old passport.</li>
+                    <li>Current proof of residence (e.g. Aadhaar card, utility bill, or bank passbook) if your
+                      residential address has changed.</li>
+                  </ul>
+                  Explore our <a href="checklist.html" class="fw-bold text-primary">Interactive Documents Checklist</a>
+                  for a complete category-by-category breakdown.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHead5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                  How does the Client Dashboard help during my application?
+                </button>
+              </h2>
+              <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHead5"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Our dedicated Client Dashboard lets you view the real-time 5-stage pipeline of your case (Application
+                  Submitted, Documents Under Review, Appointment Assistance, Application Processing, and Completed). You
+                  can securely upload and preview PDF/image documents, book preferred appointment dates, download
+                  verification checklists, and receive case alerts.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Final Contact & Consultation CTA Section -->
+  <section class="cta-banner-section">
+    <div class="container">
+      <div class="cta-banner-card">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="badge-tag badge-tag-gold mb-3">Fast & Reliable Assistance</span>
+            <h2>Ready to Fast-Track Your Passport Application?</h2>
+            <p class="text-white-50 fs-5 mb-4">
+              Connect with our certified documentation facilitators today. Let our experts handle the paperwork,
+              compliance pre-checks, and appointment logistics.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="auth.html" class="btn btn-gold btn-lg">
+                <i data-lucide="user-plus"></i>
+                <span>Create Client Account</span>
+              </a>
+              <a href="services.html" class="btn btn-outline-light btn-lg">
+                <span>Browse All Services</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Consultation Enquiry Form -->
+          <div class="col-lg-6">
+            <div class="bg-white p-4 p-md-5 rounded-4 shadow-xl text-dark">
+              <h4 class="fw-bold mb-1 text-primary-navy">Request Immediate Callback</h4>
+              <p class="text-muted small mb-3">A Senior Facilitator will call you within 15 minutes.</p>
+
+              <form id="consultationEnquiryForm">
+                <div class="mb-3">
+                  <label class="form-label small fw-bold text-muted">YOUR FULL NAME</label>
+                  <input type="text" class="form-control" placeholder="e.g. Rajiv Menon" required>
+                </div>
+                <div class="row g-2 mb-3">
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold text-muted">MOBILE NUMBER</label>
+                    <input type="tel" class="form-control" placeholder="+91 98765 43210" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold text-muted">SERVICE REQUIRED</label>
+                    <select class="form-select" required>
+                      <option value="tatkal">Tatkal Urgent Passport</option>
+                      <option value="renewal">Passport Renewal</option>
+                      <option value="new">New / Fresh Passport</option>
+                      <option value="minor">Minor Passport</option>
+                      <option value="correction">Name / Address Update</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-navy w-100 py-2">
+                  <span>Connect With Case Specialist</span>
+                  <i data-lucide="phone-outgoing" class="ms-1" style="width:16px;height:16px;"></i>
+                </button>
+
+                <div id="enquiryFeedbackAlert" class="d-none"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Global Footer -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Brand Info -->
+        <div class="col-lg-4 col-md-6">
+          <div class="navbar-brand-wrapper mb-3">
+            <div class="brand-icon-box">
+              <i data-lucide="file-badge"></i>
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-title text-white">Passport<span>Ease</span></span>
+              <span class="brand-sub text-white-50">DOCUMENTATION FACILITATION</span>
+            </div>
+          </div>
+          <p class="text-white-70 small mb-3" style="color: #CBD5E1 !important; line-height: 1.6;">
+            PassportEase is India's premier independent passport facilitation service. We simplify paperwork, eliminate errors, and guide applicants smoothly through appointment scheduling and document verification.
+          </p>
+          <div class="social-links mt-3">
+            <a href="https://linkedin.com" target="_blank" class="social-btn" aria-label="LinkedIn" title="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-btn" aria-label="Twitter" title="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" class="social-btn" aria-label="Facebook" title="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram" title="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pages Column -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-heading text-white">Pages</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1 (Classic)</a></li>
+            <li><a href="home-2.html">Home 2 (Slot Radar)</a></li>
+            <li><a href="services.html">All Services</a></li>
+            <li><a href="checklist.html">Documents Checklist</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="auth.html">Client Portal Login</a></li>
+          </ul>
+        </div>
+
+        <!-- Our Services Column -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-heading text-white">Our Services</h5>
+          <ul class="footer-links">
+            <li><a href="services.html#tatkal-passport">Tatkal Fast-Track</a></li>
+            <li><a href="services.html#renewal-passport">Passport Renewal</a></li>
+            <li><a href="services.html#new-passport">New Passport Application</a></li>
+            <li><a href="services.html#minor-passport">Minor Child Passport</a></li>
+            <li><a href="services.html#lost-passport">Lost Passport Guidance</a></li>
+          </ul>
+        </div>
+
+        <!-- Emergency Hotline Column -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-heading text-white">Emergency Hotline</h5>
+          <div class="mb-2 small" style="color: #CBD5E1 !important;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2" style="display:inline-block;vertical-align:middle;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span style="color: #E2E8F0;">Toll-Free:</span> <a href="tel:+9118002129840" class="text-white fw-bold" style="color: #FFFFFF !important; text-decoration: none;">+91 1800 212 9840</a>
+          </div>
+          <div class="mb-3 small" style="color: #CBD5E1 !important;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2" style="display:inline-block;vertical-align:middle;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span style="color: #E2E8F0;">Email:</span> <a href="mailto:support@passportease.in" class="text-white" style="color: #FFFFFF !important; text-decoration: underline;">support@passportease.in</a>
+          </div>
+          <div class="p-3 rounded border small" style="background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.18) !important;">
+            <strong style="color: #FBBF24 !important;">Tatkal Escalation Desk:</strong><br>
+            <span style="color: #CBD5E1 !important;">24/7 coverage for urgent overseas business & emergency travel.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statutory Disclaimer Box -->
+      <div class="footer-disclaimer-box mt-4 p-3 rounded" style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); color: #CBD5E1 !important; font-size: 0.82rem; line-height: 1.6;">
+        <strong style="color: #FBBF24;">IMPORTANT STATUTORY DISCLAIMER:</strong> PassportEase is an independent, private documentation assistance and facilitation consultancy. We are NOT an official government agency, passport office, or affiliated with the Ministry of External Affairs, Government of India. The official portal of the Government of India for passport applications is passportindia.gov.in. Fees charged by PassportEase are purely for consultation, form compilation, document pre-audit, and appointment assistance services.
+      </div>
+
+      <!-- Footer Bottom Row -->
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2 pt-3 mt-3 border-top" style="border-color: rgba(255, 255, 255, 0.12) !important;">
+        <div style="color: #CBD5E1 !important; font-size: 0.85rem;">
+          © 2026 PassportEase Facilitation Services Ltd. All rights reserved.
+        </div>
+        <div class="d-flex gap-3" style="font-size: 0.85rem;">
+          <a href="#" style="color: #CBD5E1 !important; text-decoration: none;">Privacy Policy</a>
+          <a href="#" style="color: #CBD5E1 !important; text-decoration: none;">Terms of Service</a>
+          <a href="#" style="color: #CBD5E1 !important; text-decoration: none;">Refund & Cancellation</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 13. Interactive Track Application Modal -->
+  <div class="modal fade" id="trackApplicationModal" tabindex="-1" aria-labelledby="trackModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-header modal-header-navy">
+          <h5 class="modal-title" id="trackModalLabel">
+            <i data-lucide="search" class="me-2"
+              style="width:18px;height:18px;display:inline-block;vertical-align:middle;"></i>
+            Track Your Assistance File
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-toggle="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="text-muted small">Enter your PassportEase Reference Number (e.g. <strong>PE-2026-98421</strong> or
+            <strong>PE-2026-44102</strong>) to view real-time case progress.
+          </p>
+          <form id="publicTrackForm">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" id="trackRefNumber" placeholder="PE-2026-98421"
+                value="PE-2026-98421" required>
+              <button class="btn btn-navy" type="submit">Track Status</button>
+            </div>
+          </form>
+
+          <!-- Result Area -->
+          <div id="trackResultArea"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

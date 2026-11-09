@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home 2 | PassportEase - Live PSK Slot Radar & Concierge Facilitation</title>
+  <meta name="description" content="PassportEase Home 2: Check live PSK appointment availability, fast-track emergency Tatkal applications, and reserve earliest priority passport slots across India.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Custom Master CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Home 2 Specialized Styles */
+    .hero-home-2 {
+      background: radial-gradient(circle at 80% 20%, #162B4D 0%, #0A192F 75%, #060F1E 100%);
+      color: #FFFFFF;
+      padding: 4.5rem 0 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-2-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      color: #FAD961;
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Live Slot Radar Widget Card */
+    .slot-radar-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 2.25rem;
+      box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--text-dark);
+      position: relative;
+    }
+
+    .slot-radar-card .form-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #64748B;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.35rem;
+    }
+
+    .slot-result-badge {
+      background: #ECFDF5;
+      border: 1px solid #10B981;
+      color: #065F46;
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+    }
+
+    /* City Slot Pill */
+    .city-slot-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .city-slot-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-gold);
+    }
+
+    .city-indicator-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #10B981;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+    }
+
+    /* Comparison Table */
+    .compare-table {
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      background: #FFFFFF;
+    }
+
+    .compare-table th {
+      padding: 1.25rem 1.5rem;
+      font-weight: 700;
+    }
+
+    .compare-table td {
+      padding: 1.1rem 1.5rem;
+      vertical-align: middle;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .col-highlight {
+      background-color: #FDF9EE;
+      border-left: 2px solid var(--accent-gold);
+      border-right: 2px solid var(--accent-gold);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Top Independent Disclaimer Bar -->
+  <div class="top-disclaimer-bar">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <div>
+        <i data-lucide="shield-alert" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:4px;color:var(--accent-gold);"></i>
+        <strong>Legal Notice:</strong> PassportEase is an independent, private documentation assistance consultancy and is NOT affiliated with any government department or official passport office.
+      </div>
+      <div class="top-bar-contact d-none d-md-flex align-items-center">
+        <span><i data-lucide="phone-call" style="width:12px;height:12px;display:inline-block;vertical-align:middle;margin-right:4px;"></i> Tatkal Helpline: +91 1800 212 9840</span>
+        <a href="mailto:support@passportease.in"><i data-lucide="mail" style="width:12px;height:12px;display:inline-block;vertical-align:middle;margin-right:4px;"></i> support@passportease.in</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Public Straight Sticky Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <!-- Clickable Logo -->
+      <a class="navbar-brand navbar-brand-wrapper" href="index.html">
+        <div class="brand-icon-box">
+          <i data-lucide="file-badge"></i>
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-title">Passport<span>Ease</span></span>
+          <span class="brand-sub">Documentation Assistance</span>
+        </div>
+      </a>
+
+      <!-- Hamburger Toggler (Single row on mobile & tablet <= 1024px) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHome2Content" aria-controls="navbarHome2Content" aria-expanded="false" aria-label="Toggle navigation">
+        <i data-lucide="menu" style="width:24px;height:24px;"></i>
+      </button>
+
+      <!-- Nav Links & CTA Actions in Strict Straight Single Row -->
+      <div class="collapse navbar-collapse" id="navbarHome2Content">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link nav-link-custom dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Home</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html"><i data-lucide="layout" class="me-2 text-primary" style="width:15px;height:15px;"></i> Home 1 (Classic Facilitation)</a></li>
+              <li><a class="dropdown-item active" href="home-2.html"><i data-lucide="calendar-search" class="me-2 text-warning" style="width:15px;height:15px;"></i> Home 2 (Live Slot Finder & Concierge)</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="checklist.html">Documents Checklist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="index.html#feeCalculator">Fee Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="contact.html">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Straight Actions: Icon Only -->
+        <div class="nav-header-actions" id="navAuthActions">
+          <button class="btn btn-outline-secondary nav-icon-btn rtl-toggle-btn" title="Toggle RTL Direction" aria-label="Toggle RTL Direction">
+            <i data-lucide="languages"></i>
+          </button>
+          <button class="btn btn-outline-secondary nav-icon-btn theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+            <i data-lucide="moon"></i>
+          </button>
+          <button class="btn btn-outline-navy nav-icon-btn" data-bs-toggle="modal" data-bs-target="#trackApplicationModal" title="Track Application" aria-label="Track Application">
+            <i data-lucide="crosshair"></i>
+          </button>
+          <a href="auth.html" class="btn btn-navy nav-icon-btn" title="Client Login" aria-label="Client Login">
+            <i data-lucide="lock"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 3. Home 2 Modern Hero with Interactive Live Slot Radar Widget -->
+  <section class="hero-home-2">
+    <div class="container position-relative" style="z-index: 2;">
+      <div class="row align-items-center g-5">
+        <!-- Hero Text -->
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="hero-2-badge">
+            <i data-lucide="radar" style="width:16px;height:16px;"></i>
+            <span>Live Regional PSK Slot Monitoring System</span>
+          </div>
+
+          <h1 class="hero-title" style="font-size: 3rem;">
+            Instant Passport Slots & <br>
+            <span class="gold-gradient-text">Zero-Error Facilitation.</span>
+          </h1>
+
+          <p class="hero-desc">
+            Bypass endless queues, appointment delays, and documentary rejections. Our automated booking desk reserves your earliest PSK appointment within 24 to 48 hours with guaranteed pre-audited paperwork.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#slotRadarSection" class="btn btn-gold btn-lg">
+              <i data-lucide="calendar-check"></i>
+              <span>Check Live City Slots</span>
+            </a>
+            <a href="services.html" class="btn btn-outline-light btn-lg">
+              <span>View All 7 Services</span>
+            </a>
+          </div>
+
+          <div class="row g-3 pt-3 border-top border-white-10">
+            <div class="col-4">
+              <strong class="d-block text-warning fs-4 fw-bold">48 Hrs</strong>
+              <span class="small text-white-50">Tatkal Slot Assistance</span>
+            </div>
+            <div class="col-4">
+              <strong class="d-block text-warning fs-4 fw-bold">99.4%</strong>
+              <span class="small text-white-50">Approval Rate</span>
+            </div>
+            <div class="col-4">
+              <strong class="d-block text-warning fs-4 fw-bold">37+ PSKs</strong>
+              <span class="small text-white-50">Regions Covered</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero 2 Live Slot Availability & Pre-Booking Widget -->
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="slot-radar-card">
+            <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom">
+              <div>
+                <h5 class="fw-bold mb-0 text-dark">Live Slot Availability Radar</h5>
+                <span class="small text-muted">Real-time quota inquiry engine</span>
+              </div>
+              <span class="badge bg-success-subtle text-success border border-success d-flex align-items-center gap-1">
+                <span class="city-indicator-dot"></span> Live Feed
+              </span>
+            </div>
+
+            <form id="heroSlotRadarForm">
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label class="form-label">YOUR CITY / REGION</label>
+                  <select class="form-select" id="radarCitySelect" required>
+                    <option value="Mumbai" selected>Mumbai (Central & Andheri)</option>
+                    <option value="Delhi NCR">Delhi NCR (Herald House & Shalimar)</option>
+                    <option value="Bengaluru">Bengaluru (Lalbagh & Sai Arcade)</option>
+                    <option value="Pune">Pune (Mundhwa Center)</option>
+                    <option value="Hyderabad">Hyderabad (Begumpet & Ameerpet)</option>
+                    <option value="Chennai">Chennai (Saligramam & Aminjikarai)</option>
+                    <option value="Kolkata">Kolkata (Bikash Bhavan)</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">SERVICE CATEGORY</label>
+                  <select class="form-select" id="radarServiceSelect" required>
+                    <option value="Tatkal Urgent Fast-Track" selected>Tatkal Urgent Fast-Track</option>
+                    <option value="Passport Renewal / Re-issue">Passport Renewal / Re-issue</option>
+                    <option value="New / Fresh Passport">New / Fresh Passport</option>
+                    <option value="Minor Child Passport">Minor Child Passport</option>
+                    <option value="Lost Passport Replacement">Lost Passport Replacement</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">PREFERRED APPOINTMENT WINDOW</label>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-sm btn-outline-secondary flex-grow-1 active" id="btnWindowEarliest">Earliest Available (1-2 Days)</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary flex-grow-1" id="btnWindowNextWeek">Next Week</button>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-navy w-100 py-2 fw-bold" id="btnScanSlots">
+                <i data-lucide="search" class="me-1" style="width:16px;height:16px;"></i>
+                <span>Scan Earliest Confirmed Slots</span>
+              </button>
+
+              <!-- Dynamic Result Area -->
+              <div class="mt-3" id="radarResultArea">
+                <div class="slot-result-badge">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <strong class="text-success"><i data-lucide="check-circle" class="me-1" style="width:16px;height:16px;display:inline-block;vertical-align:middle;"></i> Earliest Slot Available!</strong>
+                    <span class="badge bg-success text-white">Tomorrow, 10:15 AM</span>
+                  </div>
+                  <div class="small text-muted">
+                    Location: <strong>PSK Central (Lower Parel)</strong> • Quota: <strong class="text-dark">18 Tatkal Slots Open</strong>
+                  </div>
+                  <div class="mt-2 text-end">
+                    <a href="auth.html" class="btn btn-gold btn-sm py-1 px-3">
+                      <span>Reserve This Slot With Concierge</span>
+                      <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Live City Slot Radar Section -->
+  <section class="section-padding bg-light" id="slotRadarSection">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Real-Time Quota Health</span>
+        <h2 class="section-title">Today's Appointment Slot Availability</h2>
+        <p class="section-desc">Our booking system tracks PSK and POPSK cancellation slots across India every 90 seconds.</p>
+      </div>
+
+      <div class="row g-3" data-aos="fade-up" data-aos-delay="100">
+        <!-- Mumbai -->
+        <div class="col-md-6 col-lg-4">
+          <div class="city-slot-card">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="city-indicator-dot"></span>
+                <h6 class="fw-bold mb-0 text-dark">Mumbai PSK Central</h6>
+              </div>
+              <span class="small text-muted">Earliest: <strong>Tomorrow, 10:30 AM</strong></span>
+            </div>
+            <div class="text-end">
+              <span class="badge bg-success-subtle text-success">98% Available</span>
+              <div class="small text-muted mt-1">24 Tatkal Slots</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Delhi -->
+        <div class="col-md-6 col-lg-4">
+          <div class="city-slot-card">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="city-indicator-dot"></span>
+                <h6 class="fw-bold mb-0 text-dark">Delhi Herald House ITO</h6>
+              </div>
+              <span class="small text-muted">Earliest: <strong>In 48 Hours</strong></span>
+            </div>
+            <div class="text-end">
+              <span class="badge bg-success-subtle text-success">94% Available</span>
+              <div class="small text-muted mt-1">16 Tatkal Slots</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bengaluru -->
+        <div class="col-md-6 col-lg-4">
+          <div class="city-slot-card">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="city-indicator-dot"></span>
+                <h6 class="fw-bold mb-0 text-dark">Bengaluru Lalbagh PSK</h6>
+              </div>
+              <span class="small text-muted">Earliest: <strong>Tomorrow, 02:00 PM</strong></span>
+            </div>
+            <div class="text-end">
+              <span class="badge bg-success-subtle text-success">99% Available</span>
+              <div class="small text-muted mt-1">32 Tatkal Slots</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pune -->
+        <div class="col-md-6 col-lg-4">
+          <div class="city-slot-card">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="city-indicator-dot"></span>
+                <h6 class="fw-bold mb-0 text-dark">Pune Mundhwa Center</h6>
+              </div>
+              <span class="small text-muted">Earliest: <strong>In 2 Days</strong></span>
+            </div>
+            <div class="text-end">
+              <span class="badge bg-success-subtle text-success">91% Available</span>
+              <div class="small text-muted mt-1">12 Tatkal Slots</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hyderabad -->
+        <div class="col-md-6 col-lg-4">
+          <div class="city-slot-card">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="city-indicator-dot"></span>
+                <h6 class="fw-bold mb-0 text-dark">Hyderabad Begumpet PSK</h6>
+              </div>
+              <span class="small text-muted">Earliest: <strong>Tomorrow, 11:15 AM</strong></span>
+            </div>
+            <div class="text-end">
+              <span class="badge bg-success-subtle text-success">96% Available</span>
+              <div class="small text-muted mt-1">20 Tatkal Slots</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chennai -->
+        <div class="col-md-6 col-lg-4">
+          <div class="city-slot-card">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="city-indicator-dot"></span>
+                <h6 class="fw-bold mb-0 text-dark">Chennai Saligramam PSK</h6>
+              </div>
+              <span class="small text-muted">Earliest: <strong>In 48 Hours</strong></span>
+            </div>
+            <div class="text-end">
+              <span class="badge bg-success-subtle text-success">95% Available</span>
+              <div class="small text-muted mt-1">15 Tatkal Slots</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="auth.html" class="btn btn-navy btn-sm">
+          <i data-lucide="calendar-plus" class="me-1"></i>
+          <span>Reserve Priority Slot in Your City</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Scheme Comparison Matrix -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Why Concierge Assistance Wins</span>
+        <h2 class="section-title">Applying On Your Own vs. With PassportEase</h2>
+        <p class="section-desc">See how professional pre-verification eliminates delays, counter rejections, and appointment struggles.</p>
+      </div>
+
+      <div class="table-responsive" data-aos="fade-up" data-aos-delay="100">
+        <table class="table compare-table w-100">
+          <thead>
+            <tr class="table-light">
+              <th scope="col" style="width: 34%;">Facilitation Feature</th>
+              <th scope="col" class="text-muted" style="width: 33%;">Applying Alone on Gov Portal</th>
+              <th scope="col" class="col-highlight text-dark" style="width: 33%;">
+                <span class="badge bg-warning text-dark me-1">Recommended</span>
+                PassportEase Concierge
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Document Rejection Risk</strong></td>
+              <td class="text-danger"><i data-lucide="x" class="me-1"></i> 24% common errors (spelling / dates)</td>
+              <td class="col-highlight text-success fw-bold"><i data-lucide="check" class="me-1"></i> 0% (Guaranteed 14-Point Pre-Audit)</td>
+            </tr>
+            <tr>
+              <td><strong>Appointment Slot Wait Time</strong></td>
+              <td class="text-muted">15 to 30 Days (Standard Queue)</td>
+              <td class="col-highlight text-success fw-bold"><i data-lucide="check" class="me-1"></i> 24 to 48 Hours (Automated Slot Radar)</td>
+            </tr>
+            <tr>
+              <td><strong>Tatkal Urgent Fast-Track</strong></td>
+              <td class="text-muted">High cancellation rate if affidavit misformatted</td>
+              <td class="col-highlight text-success fw-bold"><i data-lucide="check" class="me-1"></i> Ready Annexure E + Same-Week Dispatch</td>
+            </tr>
+            <tr>
+              <td><strong>PSK In-Person Experience</strong></td>
+              <td class="text-muted">Uncertain queue waiting with multiple counters</td>
+              <td class="col-highlight text-success fw-bold"><i data-lucide="check" class="me-1"></i> Pre-Sorted Dossier + Counter Guidance</td>
+            </tr>
+            <tr>
+              <td><strong>Live Support & Caseworker</strong></td>
+              <td class="text-muted">Automated IVR / Busy helpline</td>
+              <td class="col-highlight text-success fw-bold"><i data-lucide="check" class="me-1"></i> Direct 1-on-1 Dedicated Specialist</td>
+            </tr>
+            <tr>
+              <td><strong>Digital Document Vault</strong></td>
+              <td class="text-muted">None</td>
+              <td class="col-highlight text-success fw-bold"><i data-lucide="check" class="me-1"></i> Encrypted 5-Stage Client Tracking Portal</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Video Highlight Section -->
+  <section class="section-padding" style="background-color: var(--primary-navy); color: #FFF;">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="badge-tag badge-tag-gold mb-3">Concierge In Action</span>
+          <h2 class="display-6 fw-bold text-white mb-3">Eliminating Passport Bureaucracy for 18,500+ Applicants</h2>
+          <p class="text-white-70 fs-6 mb-4">
+            Watch how our documentation specialists review client dossiers, catch mismatches between birth records and national IDs, and secure earliest appointment passes.
+          </p>
+
+          <div class="d-flex flex-column gap-3">
+            <div class="d-flex align-items-center gap-3">
+              <div class="p-2 rounded bg-white-10 text-warning" style="background: rgba(255,255,255,0.1);">
+                <i data-lucide="badge-check"></i>
+              </div>
+              <div>
+                <strong class="text-white d-block">Zero Rejection Guarantee</strong>
+                <span class="text-white-50 small">Every page audited before biometric submission.</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+              <div class="p-2 rounded bg-white-10 text-warning" style="background: rgba(255,255,255,0.1);">
+                <i data-lucide="shield-alert"></i>
+              </div>
+              <div>
+                <strong class="text-white d-block">Independent Expertise</strong>
+                <span class="text-white-50 small">Private consultancy dedicated exclusively to hassle-free client service.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="position-relative rounded-4 overflow-hidden shadow-xl border border-white-20">
+            <video autoplay muted loop playsinline class="w-100" style="height: 380px; object-fit: cover;">
+              <source src="v/8830590-hd_1920_1080_30fps.mp4" type="video/mp4">
+            </video>
+            <div class="position-absolute bottom-0 start-0 m-3 p-3 rounded-3 bg-dark-80 backdrop-blur border border-white-10 text-white" style="background: rgba(10,25,47,0.85);">
+              <div class="small fw-bold text-warning mb-1"><i data-lucide="play-circle" class="me-1"></i> Verified Facilitation Protocol</div>
+              <div class="small text-white-70">Over 99.4% first-time clearance across all 37 Regional Passport Offices.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Customer Testimonials (Swiper.js) -->
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Real Client Feedback</span>
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p class="section-desc">Read genuine reviews from travelers, families, and business professionals who used our concierge.</p>
+      </div>
+
+      <div class="swiper testimonials-swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div>
+                <div class="stars-rating">★★★★★</div>
+                <p class="testimonial-quote">
+                  "The Live Slot Finder on Home 2 found me a next-day appointment in Mumbai when the official portal was showing 3 weeks out. The dossier was completely organized. I was in and out of the PSK in 40 minutes!"
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img src="imahe/agus-dietrich-eUjufrdx_bM-unsplash.jpg" alt="Rohan Singhania" class="testimonial-avatar" loading="lazy">
+                <div>
+                  <div class="author-name">Rohan Singhania</div>
+                  <div class="author-location">Tech Executive, Mumbai</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div>
+                <div class="stars-rating">★★★★★</div>
+                <p class="testimonial-quote">
+                  "My minor child's birth certificate had a slight town spelling mismatch. PassportEase drafted the proper Annexure D declaration and got our slot reserved with zero delays. Outstanding service!"
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img src="imahe/alexa-m-OqDx0pa6VXI-unsplash.jpg" alt="Dr. Meera Nambiar" class="testimonial-avatar" loading="lazy">
+                <div>
+                  <div class="author-name">Dr. Meera Nambiar</div>
+                  <div class="author-location">Physician, Bengaluru</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div>
+                <div class="stars-rating">★★★★★</div>
+                <p class="testimonial-quote">
+                  "I was on an urgent business trip to Frankfurt and had only 6 days before departure. The Tatkal priority concierge team got my appointment confirmed and the passport was delivered to my doorstep in 4 days."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img src="imahe/pexels-dewnette-30851143.jpg" alt="Vikramaditya Verma" class="testimonial-avatar" loading="lazy">
+                <div>
+                  <div class="author-name">Vikramaditya Verma</div>
+                  <div class="author-location">Exporter, New Delhi</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination mt-4"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Express Consultation & Callback Banner -->
+  <section class="cta-banner-section">
+    <div class="container">
+      <div class="cta-banner-card">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="badge-tag badge-tag-gold mb-3">Express Assistance</span>
+            <h2>Need a Priority Appointment Within 48 Hours?</h2>
+            <p class="text-white-50 fs-5 mb-4">
+              Our concierge team immediately assigns an experienced caseworker to audit your documents, compile required affidavits, and secure your earliest appointment slot.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="auth.html" class="btn btn-gold btn-lg">
+                <i data-lucide="user-plus"></i>
+                <span>Open Client Account</span>
+              </a>
+              <a href="services.html" class="btn btn-outline-light btn-lg">
+                <span>Browse Services</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="bg-white p-4 p-md-5 rounded-4 shadow-xl text-dark">
+              <h4 class="fw-bold mb-1 text-primary-navy">Fast-Track Callback Request</h4>
+              <p class="text-muted small mb-3">Our concierge desk calls you within 15 minutes.</p>
+
+              <form id="consultationEnquiryForm">
+                <div class="mb-3">
+                  <label class="form-label small fw-bold text-muted">YOUR NAME</label>
+                  <input type="text" class="form-control" placeholder="e.g. Rajiv Menon" required>
+                </div>
+                <div class="row g-2 mb-3">
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold text-muted">PHONE NUMBER</label>
+                    <input type="tel" class="form-control" placeholder="+91 98765 43210" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold text-muted">URGENCY LEVEL</label>
+                    <select class="form-select" required>
+                      <option value="tatkal">Tatkal Urgent (1-3 Days)</option>
+                      <option value="renewal">Normal Renewal</option>
+                      <option value="fresh">Fresh Application</option>
+                      <option value="minor">Minor Passport</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-navy w-100 py-2">
+                  <span>Connect With Priority Specialist</span>
+                  <i data-lucide="phone-outgoing" class="ms-1" style="width:16px;height:16px;"></i>
+                </button>
+                <div id="enquiryFeedbackAlert" class="d-none"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Global Footer -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Brand Info -->
+        <div class="col-lg-4 col-md-6">
+          <div class="navbar-brand-wrapper mb-3">
+            <div class="brand-icon-box">
+              <i data-lucide="file-badge"></i>
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-title text-white">Passport<span>Ease</span></span>
+              <span class="brand-sub text-white-50">DOCUMENTATION FACILITATION</span>
+            </div>
+          </div>
+          <p class="text-white-70 small mb-3" style="color: #CBD5E1 !important; line-height: 1.6;">
+            PassportEase is India's premier independent passport facilitation service. We simplify paperwork, eliminate errors, and guide applicants smoothly through appointment scheduling and document verification.
+          </p>
+          <div class="social-links mt-3">
+            <a href="https://linkedin.com" target="_blank" class="social-btn" aria-label="LinkedIn" title="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-btn" aria-label="Twitter" title="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" class="social-btn" aria-label="Facebook" title="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram" title="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pages Column -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-heading text-white">Pages</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1 (Classic)</a></li>
+            <li><a href="home-2.html">Home 2 (Slot Radar)</a></li>
+            <li><a href="services.html">All Services</a></li>
+            <li><a href="checklist.html">Documents Checklist</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="auth.html">Client Portal Login</a></li>
+          </ul>
+        </div>
+
+        <!-- Our Services Column -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-heading text-white">Our Services</h5>
+          <ul class="footer-links">
+            <li><a href="services.html#tatkal-passport">Tatkal Fast-Track</a></li>
+            <li><a href="services.html#renewal-passport">Passport Renewal</a></li>
+            <li><a href="services.html#new-passport">New Passport Application</a></li>
+            <li><a href="services.html#minor-passport">Minor Child Passport</a></li>
+            <li><a href="services.html#lost-passport">Lost Passport Guidance</a></li>
+          </ul>
+        </div>
+
+        <!-- Emergency Hotline Column -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-heading text-white">Emergency Hotline</h5>
+          <div class="mb-2 small" style="color: #CBD5E1 !important;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2" style="display:inline-block;vertical-align:middle;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span style="color: #E2E8F0;">Toll-Free:</span> <a href="tel:+9118002129840" class="text-white fw-bold" style="color: #FFFFFF !important; text-decoration: none;">+91 1800 212 9840</a>
+          </div>
+          <div class="mb-3 small" style="color: #CBD5E1 !important;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2" style="display:inline-block;vertical-align:middle;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span style="color: #E2E8F0;">Email:</span> <a href="mailto:support@passportease.in" class="text-white" style="color: #FFFFFF !important; text-decoration: underline;">support@passportease.in</a>
+          </div>
+          <div class="p-3 rounded border small" style="background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.18) !important;">
+            <strong style="color: #FBBF24 !important;">Tatkal Escalation Desk:</strong><br>
+            <span style="color: #CBD5E1 !important;">24/7 coverage for urgent overseas business & emergency travel.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statutory Disclaimer Box -->
+      <div class="footer-disclaimer-box mt-4 p-3 rounded" style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); color: #CBD5E1 !important; font-size: 0.82rem; line-height: 1.6;">
+        <strong style="color: #FBBF24;">IMPORTANT STATUTORY DISCLAIMER:</strong> PassportEase is an independent, private documentation assistance and facilitation consultancy. We are NOT an official government agency, passport office, or affiliated with the Ministry of External Affairs, Government of India. The official portal of the Government of India for passport applications is passportindia.gov.in. Fees charged by PassportEase are purely for consultation, form compilation, document pre-audit, and appointment assistance services.
+      </div>
+
+      <!-- Footer Bottom Row -->
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2 pt-3 mt-3 border-top" style="border-color: rgba(255, 255, 255, 0.12) !important;">
+        <div style="color: #CBD5E1 !important; font-size: 0.85rem;">
+          © 2026 PassportEase Facilitation Services Ltd. All rights reserved.
+        </div>
+        <div class="d-flex gap-3" style="font-size: 0.85rem;">
+          <a href="#" style="color: #CBD5E1 !important; text-decoration: none;">Privacy Policy</a>
+          <a href="#" style="color: #CBD5E1 !important; text-decoration: none;">Terms of Service</a>
+          <a href="#" style="color: #CBD5E1 !important; text-decoration: none;">Refund & Cancellation</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Track Modal -->
+  <div class="modal fade" id="trackApplicationModal" tabindex="-1" aria-labelledby="trackModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-header modal-header-navy">
+          <h5 class="modal-title" id="trackModalLabel">Track Your Assistance File</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="text-muted small">Enter your PassportEase Reference Number (e.g. <strong>PE-2026-98421</strong>) to view real-time case progress.</p>
+          <form id="publicTrackForm">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" id="trackRefNumber" value="PE-2026-98421" required>
+              <button class="btn btn-navy" type="submit">Track Status</button>
+            </div>
+          </form>
+          <div id="trackResultArea"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Home 2 Specific Live Radar Interaction
+    document.addEventListener('DOMContentLoaded', () => {
+      const radarForm = document.getElementById('heroSlotRadarForm');
+      const radarResultArea = document.getElementById('radarResultArea');
+      const btnEarliest = document.getElementById('btnWindowEarliest');
+      const btnNextWeek = document.getElementById('btnWindowNextWeek');
+
+      if (btnEarliest && btnNextWeek) {
+        btnEarliest.addEventListener('click', () => {
+          btnEarliest.classList.add('active');
+          btnNextWeek.classList.remove('active');
+        });
+        btnNextWeek.addEventListener('click', () => {
+          btnNextWeek.classList.add('active');
+          btnEarliest.classList.remove('active');
+        });
+      }
+
+      if (radarForm && radarResultArea) {
+        radarForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const city = document.getElementById('radarCitySelect').value;
+          const service = document.getElementById('radarServiceSelect').value;
+          const scanBtn = document.getElementById('btnScanSlots');
+
+          scanBtn.disabled = true;
+          scanBtn.innerHTML = `<span class="spinner-border spinner-border-sm me-2"></span>Scanning Regional Quota Feeds...`;
+
+          setTimeout(() => {
+            scanBtn.disabled = false;
+            scanBtn.innerHTML = `<i data-lucide="search" class="me-1" style="width:16px;height:16px;"></i> Scan Earliest Confirmed Slots`;
+
+            radarResultArea.innerHTML = `
+              <div class="slot-result-badge animate__animated animate__fadeIn">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <strong class="text-success"><i data-lucide="check-circle" class="me-1" style="width:16px;height:16px;display:inline-block;vertical-align:middle;"></i> Priority Slots Available in ${city}!</strong>
+                  <span class="badge bg-success text-white">Tomorrow, 10:15 AM</span>
+                </div>
+                <div class="small text-muted">
+                  Service: <strong>${service}</strong> • Location: <strong>PSK ${city} Main Center</strong> • Quota: <strong class="text-dark">24 Confirmed Slots Open</strong>
+                </div>
+                <div class="mt-2 text-end">
+                  <a href="auth.html" class="btn btn-gold btn-sm py-1 px-3">
+                    <span>Reserve Slot & Start Assistance</span>
+                    <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+                  </a>
+                </div>
+              </div>
+            `;
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+          }, 600);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
+

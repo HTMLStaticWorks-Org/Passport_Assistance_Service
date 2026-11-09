@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | PassportEase - Regional Facilitation Desk & Helpline</title>
+  <meta name="description" content="Get in touch with PassportEase. Toll-free helpline, WhatsApp consultation desk, emergency Tatkal escalation, and regional office locations across India.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Custom Master CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .contact-card-box {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2rem;
+      height: 100%;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-card-box:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent-gold);
+    }
+
+    .contact-icon-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .office-location-card {
+      background: #F8FAFC;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+      transition: var(--transition);
+    }
+
+    .office-location-card:hover {
+      background: #FFFFFF;
+      border-color: var(--primary-navy);
+      box-shadow: var(--shadow-sm);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Top Independent Disclaimer Bar -->
+  <div class="top-disclaimer-bar">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <div>
+        <i data-lucide="shield-alert" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:4px;color:var(--accent-gold);"></i>
+        <strong>Legal Notice:</strong> PassportEase is an independent, private documentation assistance consultancy and is NOT affiliated with any government department or official passport office.
+      </div>
+      <div class="top-bar-contact d-none d-md-flex align-items-center">
+        <span><i data-lucide="phone-call" style="width:12px;height:12px;display:inline-block;vertical-align:middle;margin-right:4px;"></i> Tatkal Helpline: +91 1800 212 9840</span>
+        <a href="mailto:support@passportease.in"><i data-lucide="mail" style="width:12px;height:12px;display:inline-block;vertical-align:middle;margin-right:4px;"></i> support@passportease.in</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Public Straight Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <!-- Clickable Logo -->
+      <a class="navbar-brand navbar-brand-wrapper" href="index.html">
+        <div class="brand-icon-box">
+          <i data-lucide="file-badge"></i>
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-title">Passport<span>Ease</span></span>
+          <span class="brand-sub">Documentation Assistance</span>
+        </div>
+      </a>
+
+      <!-- Hamburger Toggler (Single row on mobile & tablet <= 1024px) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContactContent" aria-controls="navbarContactContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i data-lucide="menu" style="width:24px;height:24px;"></i>
+      </button>
+
+      <!-- Nav Links & CTA Actions in Strict Straight Single Row -->
+      <div class="collapse navbar-collapse" id="navbarContactContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Home</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html"><i data-lucide="layout" class="me-2 text-primary" style="width:15px;height:15px;"></i> Home 1 (Classic Facilitation)</a></li>
+              <li><a class="dropdown-item" href="home-2.html"><i data-lucide="calendar-search" class="me-2 text-warning" style="width:15px;height:15px;"></i> Home 2 (Live Slot Finder & Concierge)</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="checklist.html">Documents Checklist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="index.html#feeCalculator">Fee Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom active" href="contact.html">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Straight Actions: Icon Only -->
+        <div class="nav-header-actions" id="navAuthActions">
+          <button class="btn btn-outline-secondary nav-icon-btn rtl-toggle-btn" title="Toggle RTL Direction" aria-label="Toggle RTL Direction">
+            <i data-lucide="languages"></i>
+          </button>
+          <button class="btn btn-outline-secondary nav-icon-btn theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+            <i data-lucide="moon"></i>
+          </button>
+          <button class="btn btn-outline-navy nav-icon-btn" data-bs-toggle="modal" data-bs-target="#trackApplicationModal" title="Track Application" aria-label="Track Application">
+            <i data-lucide="crosshair"></i>
+          </button>
+          <a href="auth.html" class="btn btn-navy nav-icon-btn" title="Client Login" aria-label="Client Login">
+            <i data-lucide="lock"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 3. Contact Hero Banner -->
+  <header class="py-5" style="background: var(--navy-gradient); color: #FFF; position: relative;">
+    <div class="container py-4 text-center" data-aos="fade-down">
+      <span class="badge-tag badge-tag-gold mb-3">24/7 Client Facilitation Desk</span>
+      <h1 class="display-5 fw-bold text-white mb-3">Connect With Our Passport Specialists</h1>
+      <p class="text-white-50 mx-auto" style="max-width: 680px;">
+        Whether you require urgent Tatkal filing within 48 hours, assistance with minor passport parental affidavits, or clarification on document discrepancies, our senior case officers are ready to assist.
+      </p>
+    </div>
+  </header>
+
+  <!-- 4. Contact Channels Cards -->
+  <section class="section-padding bg-light pb-0">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <!-- Card 1: Phone -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="contact-card-box">
+            <div class="contact-icon-circle bg-primary-subtle text-primary">
+              <i data-lucide="phone-call"></i>
+            </div>
+            <h5 class="fw-bold mb-1 text-dark">Toll-Free Helpline</h5>
+            <p class="small text-muted mb-3">Direct consultation for general applications and renewal scheduling.</p>
+            <div class="mt-auto">
+              <strong class="d-block text-primary fs-6 mb-1">+91 1800 212 9840</strong>
+              <span class="small text-muted">Mon - Sat: 9 AM - 8 PM IST</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Tatkal Emergency -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="contact-card-box" style="border: 2px solid #EF4444;">
+            <div class="contact-icon-circle bg-danger-subtle text-danger">
+              <i data-lucide="zap"></i>
+            </div>
+            <div class="d-flex align-items-center gap-1 mb-1">
+              <h5 class="fw-bold mb-0 text-dark">Tatkal Escalation</h5>
+              <span class="badge bg-danger text-white" style="font-size:0.65rem;">24/7 Priority</span>
+            </div>
+            <p class="small text-muted mb-3">Urgent overseas medical emergencies, bereavement, and critical job deployments.</p>
+            <div class="mt-auto">
+              <strong class="d-block text-danger fs-6 mb-1">+91 98765 43210</strong>
+              <span class="small text-muted">Round-The-Clock On-Call</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: WhatsApp -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="contact-card-box">
+            <div class="contact-icon-circle bg-success-subtle text-success">
+              <i data-lucide="message-square"></i>
+            </div>
+            <h5 class="fw-bold mb-1 text-dark">WhatsApp Helpdesk</h5>
+            <p class="small text-muted mb-3">Instant document pre-check and scan readability verification.</p>
+            <div class="mt-auto">
+              <a href="https://wa.me/919876543210" target="_blank" class="btn btn-outline-success btn-sm w-100 fw-bold">
+                <i data-lucide="external-link" style="width:14px;height:14px;"></i>
+                <span>Open WhatsApp Chat</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Email -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="contact-card-box">
+            <div class="contact-icon-circle bg-warning-subtle text-warning">
+              <i data-lucide="mail"></i>
+            </div>
+            <h5 class="fw-bold mb-1 text-dark">Official Documentation</h5>
+            <p class="small text-muted mb-3">Send audit inquiries and multi-page corporate dossiers.</p>
+            <div class="mt-auto">
+              <strong class="d-block text-dark small mb-1">support@passportease.in</strong>
+              <span class="small text-muted">Response in &lt; 15 mins</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Main Contact & Consultation Form + Regional Hubs -->
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="row g-5 align-items-stretch">
+        
+        <!-- Left: Form Column -->
+        <div class="col-lg-7" data-aos="fade-right">
+          <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm border h-100">
+            <span class="badge-tag badge-tag-gold mb-2">Direct Inquiry Form</span>
+            <h3 class="fw-bold mb-2 text-dark">Request Expert Case Assessment</h3>
+            <p class="text-muted small mb-4">Complete the details below. An assigned Senior Facilitator will review your requirements and reach out directly.</p>
+
+            <form id="contactPageForm">
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold text-muted">FULL LEGAL NAME</label>
+                  <input type="text" class="form-control" placeholder="e.g. Vikram Malhotra" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold text-muted">MOBILE NUMBER (10 DIGITS)</label>
+                  <input type="tel" class="form-control" placeholder="+91 98765 43210" required>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold text-muted">EMAIL ADDRESS</label>
+                  <input type="email" class="form-control" placeholder="name@domain.com" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold text-muted">PREFERRED CITY / PSK REGION</label>
+                  <select class="form-select" required>
+                    <option value="Mumbai" selected>Mumbai (BKC / Lower Parel / Andheri)</option>
+                    <option value="Delhi NCR">Delhi NCR (ITO / Gurgaon / Noida)</option>
+                    <option value="Bengaluru">Bengaluru (Lalbagh / Sai Arcade)</option>
+                    <option value="Pune">Pune (Mundhwa Center)</option>
+                    <option value="Hyderabad">Hyderabad (Begumpet)</option>
+                    <option value="Chennai">Chennai (Saligramam)</option>
+                    <option value="Kolkata">Kolkata (Bikash Bhavan)</option>
+                    <option value="Other">Other Region / POPSK Center</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold text-muted">SERVICE REQUIRED</label>
+                  <select class="form-select" required>
+                    <option value="tatkal" selected>Tatkal Urgent Expedited Passport</option>
+                    <option value="renewal">Passport Renewal / Re-issue</option>
+                    <option value="new">Fresh / New Adult Passport</option>
+                    <option value="minor">Minor Child Passport (Under 18)</option>
+                    <option value="lost">Lost / Damaged Replacement Guidance</option>
+                    <option value="correction">Information / Name / Spouse Update</option>
+                    <option value="appointment">Appointment Slot Rescheduling</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold text-muted">TRAVEL TIMELINE / URGENCY</label>
+                  <select class="form-select" required>
+                    <option value="urgent">Emergency / Critical (&lt; 48 Hours)</option>
+                    <option value="week" selected>Within Next 7 Days</option>
+                    <option value="month">Within Next 30 Days</option>
+                    <option value="general">Planning Ahead / General Inquiry</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label small fw-bold text-muted">DESCRIBE YOUR INQUIRY OR DISCREPANCY</label>
+                <textarea class="form-control" rows="4" placeholder="Please describe any name spelling differences, old passport expiry details, or appointment requirements..." required></textarea>
+              </div>
+
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="contactConsent" checked required>
+                <label class="form-check-label small text-muted" for="contactConsent">
+                  I understand PassportEase is an independent facilitation consultancy and authorize a case specialist to contact me regarding documentation assistance.
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-navy w-100 py-3 fw-bold" id="btnSubmitContact">
+                <i data-lucide="send" class="me-2" style="width:16px;height:16px;"></i>
+                <span>Submit Inquiry to Facilitation Desk</span>
+              </button>
+
+              <div id="contactFormFeedback" class="alert alert-success mt-3 py-2 small d-none">
+                <strong>Thank you!</strong> Your case inquiry has been dispatched to our senior facilitation desk. An officer will call you within 15 minutes.
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right: Regional Offices & Operating Hours -->
+        <div class="col-lg-5" data-aos="fade-left">
+          <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm border h-100 d-flex flex-column justify-content-between">
+            <div>
+              <span class="badge-tag badge-tag-navy mb-2">Physical Offices</span>
+              <h4 class="fw-bold mb-3 text-dark">Regional Facilitation Hubs</h4>
+              <p class="text-muted small mb-4">Clients may visit our facilitation suites by prior appointment for in-person document compilation and biometric pre-audits.</p>
+
+              <!-- Office 1: Mumbai -->
+              <div class="office-location-card">
+                <div class="d-flex align-items-center gap-2 mb-1">
+                  <i data-lucide="building-2" class="text-primary" style="width:16px;height:16px;"></i>
+                  <strong class="text-dark">Mumbai Corporate Headquarters</strong>
+                </div>
+                <p class="small text-muted mb-1">Regus Business Center, Level 5, Trade Tower, Bandra Kurla Complex (BKC), Mumbai, Maharashtra 400051</p>
+                <span class="badge bg-light text-dark border small">Helpline: +91 1800 212 9840</span>
+              </div>
+
+              <!-- Office 2: Delhi -->
+              <div class="office-location-card">
+                <div class="d-flex align-items-center gap-2 mb-1">
+                  <i data-lucide="building-2" class="text-primary" style="width:16px;height:16px;"></i>
+                  <strong class="text-dark">Delhi NCR Liaison Bureau</strong>
+                </div>
+                <p class="small text-muted mb-1">Statesman House, Barakhamba Road, Connaught Place, New Delhi 110001</p>
+                <span class="badge bg-light text-dark border small">Desk: +91 011 4982 7100</span>
+              </div>
+
+              <!-- Office 3: Bengaluru -->
+              <div class="office-location-card">
+                <div class="d-flex align-items-center gap-2 mb-1">
+                  <i data-lucide="building-2" class="text-primary" style="width:16px;height:16px;"></i>
+                  <strong class="text-dark">Bengaluru Tech Corridor Desk</strong>
+                </div>
+                <p class="small text-muted mb-1">Pre-Biometric Facilitation Suite, Level 3, MG Road, Bengaluru, Karnataka 560001</p>
+                <span class="badge bg-light text-dark border small">Desk: +91 080 3982 4410</span>
+              </div>
+            </div>
+
+            <!-- Operating Hours Box -->
+            <div class="p-3 rounded-3 bg-light border mt-4">
+              <h6 class="fw-bold text-dark small mb-2"><i data-lucide="clock" class="text-warning me-1"></i> Facilitation Timings:</h6>
+              <div class="d-flex justify-content-between small text-muted mb-1">
+                <span>Monday – Friday:</span>
+                <strong>09:00 AM – 08:00 PM IST</strong>
+              </div>
+              <div class="d-flex justify-content-between small text-muted mb-1">
+                <span>Saturday:</span>
+                <strong>09:30 AM – 05:00 PM IST</strong>
+              </div>
+              <div class="d-flex justify-content-between small text-muted">
+                <span>Sunday:</span>
+                <span class="text-danger fw-bold">Emergency Tatkal On-Call</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Global Footer -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Brand Info -->
+        <div class="col-lg-4 col-md-6">
+          <div class="navbar-brand-wrapper mb-3">
+            <div class="brand-icon-box">
+              <i data-lucide="file-badge"></i>
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-title text-white">Passport<span>Ease</span></span>
+              <span class="brand-sub text-white-50">DOCUMENTATION FACILITATION</span>
+            </div>
+          </div>
+          <p class="text-white-70 small mb-3" style="color: #CBD5E1 !important; line-height: 1.6;">
+            PassportEase is India's premier independent passport facilitation service. We simplify paperwork, eliminate errors, and guide applicants smoothly through appointment scheduling and document verification.
+          </p>
+          <div class="social-links mt-3">
+            <a href="https://linkedin.com" target="_blank" class="social-btn" aria-label="LinkedIn" title="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-btn" aria-label="Twitter" title="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" class="social-btn" aria-label="Facebook" title="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram" title="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pages Column -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-heading text-white">Pages</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1 (Classic)</a></li>
+            <li><a href="home-2.html">Home 2 (Slot Radar)</a></li>
+            <li><a href="services.html">All Services</a></li>
+            <li><a href="checklist.html">Documents Checklist</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="auth.html">Client Portal Login</a></li>
+          </ul>
+        </div>
+
+        <!-- Our Services Column -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-heading text-white">Our Services</h5>
+          <ul class="footer-links">
+            <li><a href="services.html#tatkal-passport">Tatkal Fast-Track</a></li>
+            <li><a href="services.html#renewal-passport">Passport Renewal</a></li>
+            <li><a href="services.html#new-passport">New Passport Application</a></li>
+            <li><a href="services.html#minor-passport">Minor Child Passport</a></li>
+            <li><a href="services.html#lost-passport">Lost Passport Guidance</a></li>
+          </ul>
+        </div>
+
+        <!-- Emergency Hotline Column -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-heading text-white">Emergency Hotline</h5>
+          <div class="mb-2 small" style="color: #CBD5E1 !important;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2" style="display:inline-block;vertical-align:middle;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span style="color: #E2E8F0;">Toll-Free:</span> <a href="tel:+9118002129840" class="text-white fw-bold" style="color: #FFFFFF !important; text-decoration: none;">+91 1800 212 9840</a>
+          </div>
+          <div class="mb-3 small" style="color: #CBD5E1 !important;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2" style="display:inline-block;vertical-align:middle;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span style="color: #E2E8F0;">Email:</span> <a href="mailto:support@passportease.in" class="text-white" style="color: #FFFFFF !important; text-decoration: underline;">support@passportease.in</a>
+          </div>
+          <div class="p-3 rounded border small" style="background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.18) !important;">
+            <strong style="color: #FBBF24 !important;">Tatkal Escalation Desk:</strong><br>
+            <span style="color: #CBD5E1 !important;">24/7 coverage for urgent overseas business & emergency travel.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statutory Disclaimer Box -->
+      <div class="footer-disclaimer-box mt-4 p-3 rounded" style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); color: #CBD5E1 !important; font-size: 0.82rem; line-height: 1.6;">
+        <strong style="color: #FBBF24;">IMPORTANT STATUTORY DISCLAIMER:</strong> PassportEase is an independent, private documentation assistance and facilitation consultancy. We are NOT an official government agency, passport office, or affiliated with the Ministry of External Affairs, Government of India. The official portal of the Government of India for passport applications is passportindia.gov.in. Fees charged by PassportEase are purely for consultation, form compilation, document pre-audit, and appointment assistance services.
+      </div>
+
+      <!-- Footer Bottom Row -->
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2 pt-3 mt-3 border-top" style="border-color: rgba(255, 255, 255, 0.12) !important;">
+        <div style="color: #CBD5E1 !important; font-size: 0.85rem;">
+          © 2026 PassportEase Facilitation Services Ltd. All rights reserved.
+        </div>
+        <div class="d-flex gap-3" style="font-size: 0.85rem;">
+          <a href="#" style="color: #CBD5E1 !important; text-decoration: none;">Privacy Policy</a>
+          <a href="#" style="color: #CBD5E1 !important; text-decoration: none;">Terms of Service</a>
+          <a href="#" style="color: #CBD5E1 !important; text-decoration: none;">Refund & Cancellation</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Track Modal -->
+  <div class="modal fade" id="trackApplicationModal" tabindex="-1" aria-labelledby="trackModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-header modal-header-navy">
+          <h5 class="modal-title" id="trackModalLabel">Track Your Assistance File</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="text-muted small">Enter your PassportEase Reference Number (e.g. <strong>PE-2026-98421</strong>) to view real-time case progress.</p>
+          <form id="publicTrackForm">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" id="trackRefNumber" value="PE-2026-98421" required>
+              <button class="btn btn-navy" type="submit">Track Status</button>
+            </div>
+          </form>
+          <div id="trackResultArea"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('contactPageForm');
+      const feedback = document.getElementById('contactFormFeedback');
+      const btn = document.getElementById('btnSubmitContact');
+
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const orig = btn.innerHTML;
+          btn.disabled = true;
+          btn.innerHTML = `<span class="spinner-border spinner-border-sm me-2"></span>Connecting with Facilitator...`;
+
+          setTimeout(() => {
+            btn.disabled = false;
+            btn.innerHTML = orig;
+            form.reset();
+            if (feedback) {
+              feedback.classList.remove('d-none');
+              setTimeout(() => feedback.classList.add('d-none'), 8000);
+            }
+          }, 800);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
+
