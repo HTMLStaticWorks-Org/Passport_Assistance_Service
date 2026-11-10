@@ -889,7 +889,7 @@ img, video {
   font-weight: 700;
 }
 
-.nav-link-custom.active::after {
+.nav-link-custom:not(.dropdown-toggle).active::after {
   content: '';
   position: absolute;
   bottom: 4px;
@@ -2158,3 +2158,250 @@ img, video {
   }
 }
 
+
+
+/* ==========================================================================
+   ENHANCED COMPONENTS & FIXES
+   ========================================================================== */
+
+/* 1. Desktop Hover for Navbar Dropdown */
+@media (min-width: 992px) {
+  .navbar-nav .nav-item.dropdown:hover > .dropdown-menu {
+    display: block !important;
+    margin-top: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    animation: navDropdownFade 0.18s ease-in-out;
+  }
+}
+
+@keyframes navDropdownFade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-item {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.dropdown-menu.show {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* 2. Primary Login CTA in Navbar */
+.nav-login-btn {
+  height: 42px !important;
+  border-radius: 10px !important;
+  font-weight: 700 !important;
+  font-size: 0.88rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.45rem !important;
+  padding: 0 1rem !important;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25) !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  color: #060F1E !important;
+  background: var(--accent-gold-gradient) !important;
+  border: none !important;
+  transition: var(--transition) !important;
+  text-decoration: none !important;
+}
+
+.nav-login-btn:hover {
+  background: linear-gradient(135deg, #E6C764 0%, #BA8F1D 100%) !important;
+  color: #060F1E !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.4) !important;
+}
+
+/* 3. Hero CTA Buttons Normalization (Home 1) */
+.hero-cta-group .btn {
+  height: 54px !important;
+  min-height: 54px !important;
+  max-height: 54px !important;
+  padding: 0 1.75rem !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.6rem !important;
+  border-radius: 10px !important;
+  box-sizing: border-box !important;
+  line-height: 1 !important;
+}
+
+.hero-cta-group .btn-gold {
+  border: 2px solid transparent !important;
+}
+
+.hero-cta-group .btn-outline-gold {
+  border: 2px solid var(--accent-gold) !important;
+}
+
+/* 4. Step Cards: Vertical Flex Layout & Baseline CTA Alignment */
+.step-card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  position: relative;
+}
+
+.step-card p {
+  flex-grow: 1;
+  margin-bottom: 1.25rem;
+}
+
+.step-card-footer {
+  margin-top: auto !important;
+  padding-top: 0.75rem;
+}
+
+.step-cta-link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.step-cta-link:hover {
+  color: #B38600;
+  transform: translateX(4px);
+}
+
+[data-theme="dark"] .step-cta-link {
+  color: #FBBF24 !important;
+}
+
+[data-theme="dark"] .step-cta-link:hover {
+  color: #FDE047 !important;
+}
+
+/* 5. Dark Mode Select Dropdown Chevron (Visible & Crisp White) */
+[data-theme="dark"] .form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2.2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 0.85rem center !important;
+  background-size: 16px 12px !important;
+}
+
+/* 6. RTL Mode Fixes for Accordion & Select Chevrons */
+[dir="rtl"] .accordion-button {
+  text-align: right !important;
+  padding-left: 3.25rem !important;
+  padding-right: 1.25rem !important;
+}
+
+[dir="rtl"] .accordion-button::after {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+[dir="rtl"] .form-select {
+  text-align: right !important;
+  background-position: left 0.85rem center !important;
+  padding-right: 1rem !important;
+  padding-left: 2.5rem !important;
+}
+
+[dir="rtl"][data-theme="dark"] .form-select,
+[data-theme="dark"][dir="rtl"] .form-select {
+  background-position: left 0.85rem center !important;
+}
+
+[dir="rtl"] .step-cta-link:hover {
+  transform: translateX(-4px);
+}
+
+/* 7. Testimonials Slider: Separated Pagination Below Cards */
+.testimonials-section .swiper {
+  padding-bottom: 1rem !important;
+}
+
+.testimonials-pagination {
+  position: static !important;
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.6rem !important;
+  width: auto !important;
+  margin: 1.75rem auto 0 !important;
+}
+
+.testimonials-pagination .swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background: var(--accent-gold) !important;
+  opacity: 0.35 !important;
+  margin: 0 !important;
+  transition: all 0.3s ease !important;
+  border-radius: 50% !important;
+}
+
+.testimonials-pagination .swiper-pagination-bullet-active {
+  width: 28px !important;
+  border-radius: 8px !important;
+  opacity: 1 !important;
+  background: var(--accent-gold) !important;
+}
+
+.testimonial-avatar {
+  width: 52px !important;
+  height: 52px !important;
+  min-width: 52px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  border: 2px solid var(--accent-gold) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 8. Floating Back to Top Button */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent-gold-gradient);
+  color: #060F1E !important;
+  border: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1040;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.back-to-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top-btn:hover {
+  background: linear-gradient(135deg, #E6C764 0%, #BA8F1D 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(212, 175, 55, 0.45);
+  color: #060F1E !important;
+}
+
+[dir="rtl"] .back-to-top-btn {
+  right: auto;
+  left: 28px;
+}

@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         disableOnInteraction: false,
       },
       pagination: {
-        el: '.swiper-pagination',
+        el: '.testimonials-pagination',
         clickable: true,
       },
       navigation: {
@@ -80,7 +80,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize Consultation & Enquiry Form
   initEnquiryForm();
+
+  // Initialize Floating Back to Top Button
+  initBackToTop();
+
+  // Initialize Navbar Dropdown Handler
+  initDropdownHandler();
 });
+
+/**
+ * Navbar Dropdown Helper (Desktop & Mobile)
+ */
+function initDropdownHandler() {
+  document.querySelectorAll('.navbar-nav .dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const menu = toggle.nextElementSibling;
+      if (menu && menu.classList.contains('dropdown-menu')) {
+        menu.classList.toggle('show');
+        toggle.setAttribute('aria-expanded', menu.classList.contains('show'));
+      }
+    });
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-item.dropdown')) {
+      document.querySelectorAll('.navbar-nav .dropdown-menu.show').forEach(menu => {
+        menu.classList.remove('show');
+        const toggle = menu.previousElementSibling;
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+}
 
 /**
  * Update Navbar based on logged in state
@@ -103,12 +136,8 @@ function updateNavbarAuthState() {
         <button class="btn btn-outline-secondary nav-icon-btn theme-toggle-btn" title="${currentTheme === 'dark' ? 'Switch to Light Theme' : 'Switch to Dark Theme'}" aria-label="Toggle Theme">
           <i data-lucide="${currentTheme === 'dark' ? 'sun' : 'moon'}"></i>
         </button>
-        <button class="btn btn-outline-navy nav-icon-btn" data-bs-toggle="modal" data-bs-target="#trackApplicationModal" title="Track Application" aria-label="Track Application">
-          <i data-lucide="crosshair"></i>
-        </button>
-        <a href="dashboard.html" class="btn btn-gold nav-icon-btn" title="Dashboard (${user.fullName ? user.fullName.split(' ')[0] : 'Client'})" aria-label="Dashboard">
-          <i data-lucide="layout-dashboard"></i>
-        </a>
+        <button class="btn btn-outline-navy nav-icon-btn" data-bs-toggle="modal" data-bs-target="#trackApplicationModal" title="Track Application" aria-label="Track Application"><i data-lucide="search"></i></button>
+        <a href="dashboard.html" class="btn btn-gold nav-login-btn" title="Dashboard" aria-label="Dashboard"><i data-lucide="layout-dashboard" style="width:16px;height:16px;"></i><span class="d-none d-sm-inline">Dashboard</span></a>
       `;
       if (typeof lucide !== 'undefined') lucide.createIcons();
       attachThemeAndRtlListeners();
@@ -417,3 +446,24 @@ function initEnquiryForm() {
   });
 }
 
+
+
+/**
+ * Floating Back To Top Button
+ */
+function initBackToTop() {
+  const bttBtn = document.getElementById('backToTopBtn');
+  if (!bttBtn) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      bttBtn.classList.add('visible');
+    } else {
+      bttBtn.classList.remove('visible');
+    }
+  });
+
+  bttBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}

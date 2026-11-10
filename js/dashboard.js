@@ -1035,3 +1035,16 @@ function applyDirection(dir) {
   if (typeof lucide !== 'undefined') lucide.createIcons();
 }
 
+
+
+// Back to top button
+const bttBtn = document.getElementById('backToTopBtn');
+if (bttBtn) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) bttBtn.classList.add('visible');
+    else bttBtn.classList.remove('visible');
+  });
+  bttBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
