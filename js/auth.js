@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   
-  // Setup Theme & RTL toggles on auth page
+    // Setup Theme & RTL toggles on auth page
   function setupAuthToggles() {
     const themeBtns = document.querySelectorAll('.theme-toggle-btn');
     const rtlBtns = document.querySelectorAll('.rtl-toggle-btn');
@@ -38,11 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (nextTheme === 'dark') {
           document.documentElement.setAttribute('data-theme', 'dark');
           localStorage.setItem('passportease_theme', 'dark');
-          btn.innerHTML = '<i data-lucide="sun" style="width:17px;height:17px;"></i>';
+          btn.innerHTML = '<i data-lucide="sun" style="width:16px;height:16px;"></i><span>Light</span>';
         } else {
           document.documentElement.removeAttribute('data-theme');
           localStorage.setItem('passportease_theme', 'light');
-          btn.innerHTML = '<i data-lucide="moon" style="width:17px;height:17px;"></i>';
+          btn.innerHTML = '<i data-lucide="moon" style="width:16px;height:16px;"></i><span>Dark</span>';
         }
         if (typeof lucide !== 'undefined') lucide.createIcons();
       });
@@ -56,19 +56,25 @@ document.addEventListener('DOMContentLoaded', () => {
           document.documentElement.setAttribute('dir', 'rtl');
           document.documentElement.setAttribute('lang', 'ar');
           localStorage.setItem('passportease_dir', 'rtl');
+          btn.innerHTML = '<span>LTR</span>';
         } else {
           document.documentElement.removeAttribute('dir');
           document.documentElement.setAttribute('lang', 'en');
           localStorage.setItem('passportease_dir', 'ltr');
+          btn.innerHTML = '<span>RTL</span>';
         }
         if (typeof lucide !== 'undefined') lucide.createIcons();
       });
     });
 
-    // Update initial button icons
+    // Update initial button text & icons
     const currentTheme = localStorage.getItem('passportease_theme') || 'light';
     themeBtns.forEach(btn => {
-      btn.innerHTML = currentTheme === 'dark' ? '<i data-lucide="sun" style="width:17px;height:17px;"></i>' : '<i data-lucide="moon" style="width:17px;height:17px;"></i>';
+      btn.innerHTML = currentTheme === 'dark' ? '<i data-lucide="sun" style="width:16px;height:16px;"></i><span>Light</span>' : '<i data-lucide="moon" style="width:16px;height:16px;"></i><span>Dark</span>';
+    });
+    const currentDir = localStorage.getItem('passportease_dir') || 'ltr';
+    rtlBtns.forEach(btn => {
+      btn.innerHTML = currentDir === 'rtl' ? '<span>LTR</span>' : '<span>RTL</span>';
     });
     if (typeof lucide !== 'undefined') lucide.createIcons();
   }

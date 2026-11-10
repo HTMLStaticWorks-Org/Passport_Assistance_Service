@@ -167,11 +167,11 @@ function applyTheme(theme) {
 
   document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
     if (theme === 'dark') {
-      btn.innerHTML = '<i data-lucide="sun"></i>';
+      btn.innerHTML = '<i data-lucide="sun" style="width:16px;height:16px;"></i><span>Light</span>';
       btn.setAttribute('title', 'Switch to Light Theme');
       btn.setAttribute('aria-label', 'Switch to Light Theme');
     } else {
-      btn.innerHTML = '<i data-lucide="moon"></i>';
+      btn.innerHTML = '<i data-lucide="moon" style="width:16px;height:16px;"></i><span>Dark</span>';
       btn.setAttribute('title', 'Switch to Dark Theme');
       btn.setAttribute('aria-label', 'Switch to Dark Theme');
     }
@@ -197,12 +197,13 @@ function applyDirection(dir) {
   }
 
   document.querySelectorAll('.rtl-toggle-btn').forEach(btn => {
-    btn.innerHTML = '<i data-lucide="languages"></i>';
     if (dir === 'rtl') {
+      btn.innerHTML = '<span>LTR</span>';
       btn.setAttribute('title', 'Switch to LTR Direction');
       btn.setAttribute('aria-label', 'Switch to LTR Direction');
       btn.classList.add('active');
     } else {
+      btn.innerHTML = '<span>RTL</span>';
       btn.setAttribute('title', 'Switch to RTL Direction');
       btn.setAttribute('aria-label', 'Switch to RTL Direction');
       btn.classList.remove('active');

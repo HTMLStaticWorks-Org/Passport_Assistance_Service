@@ -2664,3 +2664,276 @@ img, video {
 [data-theme="dark"] .auth-tab-btn.active {
   color: #FFFFFF !important;
 }
+
+
+/* ==========================================================================
+   LATEST USER REFINEMENTS:
+   1. PILL BUTTONS [ RTL ] & [ 🌙 Dark ] MATCHING REFERENCE SCREENSHOT
+   2. WATERMARK NUMBER (01, 02, 03) VISIBLE IN DARK MODE
+   3. HIGH CONTRAST FOOTER & TEXT VISIBILITY IN DARK MODE
+   4. EQUAL SIZED CARDS IN ALL VIEWS (SWIPER, STEPS, SERVICES, CONTACT)
+   ========================================================================== */
+
+/* 1. Pill Buttons [ RTL ] and [ 🌙 Dark ] matching reference screenshot */
+.nav-pill-btn {
+  border-radius: 50px !important;
+  padding: 0.35rem 1.15rem !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.45rem !important;
+  transition: var(--transition) !important;
+  white-space: nowrap !important;
+  border: 1.5px solid #CBD5E1 !important;
+  background-color: #FFFFFF !important;
+  color: #1E293B !important;
+  cursor: pointer !important;
+}
+
+.nav-pill-btn:hover {
+  border-color: var(--accent-gold) !important;
+  color: var(--accent-gold) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="dark"] .nav-pill-btn {
+  background-color: #111111 !important;
+  border: 1.5px solid #333333 !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .nav-pill-btn:hover {
+  border-color: var(--accent-gold) !important;
+  color: var(--accent-gold) !important;
+}
+
+/* 2. Step Watermark Number (01, 02, 03) Visible in Dark Mode */
+.step-number-watermark {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: rgba(10, 25, 47, 0.10) !important;
+  line-height: 1;
+  pointer-events: none;
+  transition: var(--transition);
+  z-index: 1;
+}
+
+[data-theme="dark"] .step-number-watermark {
+  color: rgba(255, 255, 255, 0.18) !important;
+}
+
+.step-card:hover .step-number-watermark {
+  color: rgba(212, 175, 55, 0.25) !important;
+}
+
+[data-theme="dark"] .step-card:hover .step-number-watermark {
+  color: rgba(212, 175, 55, 0.40) !important;
+}
+
+[dir="rtl"] .step-number-watermark {
+  right: auto !important;
+  left: 1.25rem !important;
+}
+
+/* 3. High Contrast Footer & Invisible Text Resolution in Dark Mode */
+.footer-contact-link,
+a.footer-contact-link {
+  color: inherit !important;
+  text-decoration: none !important;
+  transition: var(--transition) !important;
+}
+
+.footer-contact-link:hover,
+a.footer-contact-link:hover {
+  color: var(--accent-gold) !important;
+  text-decoration: underline !important;
+}
+
+[data-theme="dark"] .footer-main {
+  background-color: #000000 !important;
+  color: #E2E8F0 !important;
+  border-top: 1px solid #222222 !important;
+}
+
+[data-theme="dark"] .footer-main p,
+[data-theme="dark"] .footer-main span,
+[data-theme="dark"] .footer-main small,
+[data-theme="dark"] .footer-main div {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .footer-main .footer-heading,
+[data-theme="dark"] .footer-main h5,
+[data-theme="dark"] .footer-main h4 {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .footer-main a:not(.btn):not(.social-btn),
+[data-theme="dark"] .footer-contact-link,
+[data-theme="dark"] .footer-links a,
+[data-theme="dark"] a.footer-contact-link {
+  color: #FFFFFF !important;
+  font-weight: 500 !important;
+}
+
+[data-theme="dark"] .footer-main a:not(.btn):not(.social-btn):hover,
+[data-theme="dark"] .footer-contact-link:hover,
+[data-theme="dark"] .footer-links a:hover {
+  color: #FBBF24 !important;
+}
+
+[data-theme="dark"] .footer-tatkal-card {
+  background-color: #080808 !important;
+  border: 1px solid #2A2A2A !important;
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .footer-tatkal-card span {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .footer-disclaimer-box {
+  background-color: #080808 !important;
+  border: 1px solid #222222 !important;
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .footer-disclaimer-box strong {
+  color: #FBBF24 !important;
+}
+
+[data-theme="dark"] .footer-bottom,
+[data-theme="dark"] .footer-bottom span,
+[data-theme="dark"] .footer-bottom p,
+[data-theme="dark"] .footer-bottom a {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .footer-bottom a:hover {
+  color: #FBBF24 !important;
+}
+
+:root:not([data-theme="dark"]) .footer-contact-link,
+:root:not([data-theme="dark"]) a.footer-contact-link {
+  color: #0A192F !important;
+  font-weight: 600 !important;
+}
+
+:root:not([data-theme="dark"]) .footer-contact-link:hover {
+  color: #B38600 !important;
+}
+
+/* 4. Equal Sized Cards Across All Views (Responsive, Desktop, Tablet, Mobile) */
+.testimonials-section .swiper,
+.testimonials-swiper {
+  overflow: hidden !important;
+}
+
+.testimonials-swiper .swiper-wrapper {
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.testimonials-swiper .swiper-slide {
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.testimonial-card {
+  height: 100% !important;
+  min-height: 100% !important;
+  flex: 1 1 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: 2.25rem !important;
+  box-sizing: border-box !important;
+}
+
+.testimonial-quote {
+  flex-grow: 1 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.testimonial-author {
+  margin-top: auto !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Step Cards Equal Height */
+.step-card {
+  height: 100% !important;
+  min-height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: 2.25rem 2rem !important;
+  box-sizing: border-box !important;
+}
+
+.step-card p {
+  flex-grow: 1 !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.step-card-footer {
+  margin-top: auto !important;
+}
+
+/* Service Cards Equal Height */
+.service-card {
+  height: 100% !important;
+  min-height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.service-card-body {
+  flex: 1 1 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+.service-card-text {
+  flex-grow: 1 !important;
+}
+
+.service-card-meta {
+  margin-top: auto !important;
+}
+
+/* Contact Cards Equal Height */
+.contact-card-box {
+  height: 100% !important;
+  min-height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+.contact-card-box p {
+  flex-grow: 1 !important;
+}
+
+/* Equal height for any card inside row grid columns */
+.row.g-4 > [class*="col-"] {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.row.g-4 > [class*="col-"] > * {
+  flex: 1 1 auto !important;
+  height: 100% !important;
+}

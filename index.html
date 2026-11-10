@@ -91,12 +91,14 @@
         </ul>
 
         <!-- Straight Actions: 4 Icon Buttons Side-by-Side (Languages, Theme, Track App, Login) -->
+                <!-- Straight Actions: Pill Buttons (RTL, Theme) + Track App + Login -->
         <div class="nav-header-actions" id="navAuthActions">
-          <button class="btn btn-outline-secondary nav-icon-btn rtl-toggle-btn" title="Toggle RTL Direction" aria-label="Toggle RTL Direction">
-            <i data-lucide="languages"></i>
+          <button class="btn btn-outline-secondary nav-pill-btn rtl-toggle-btn" title="Toggle RTL Direction" aria-label="Toggle RTL Direction">
+            <span>RTL</span>
           </button>
-          <button class="btn btn-outline-secondary nav-icon-btn theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
-            <i data-lucide="moon"></i>
+          <button class="btn btn-outline-secondary nav-pill-btn theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+            <i data-lucide="moon" style="width:16px;height:16px;"></i>
+            <span>Dark</span>
           </button>
           <button class="btn btn-outline-secondary nav-icon-btn track-app-btn" data-bs-toggle="modal" data-bs-target="#trackApplicationModal" title="Track Application" aria-label="Track Application">
             <i data-lucide="crosshair"></i>
