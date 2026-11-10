@@ -91,24 +91,6 @@
               <span>My Profile</span>
             </a>
           </li>
-          <li class="sidebar-menu-item">
-            <a href="index.html" class="sidebar-menu-link" target="_blank">
-              <i data-lucide="external-link"></i>
-              <span>Home 1 (Classic)</span>
-            </a>
-          </li>
-          <li class="sidebar-menu-item">
-            <a href="home-2.html" class="sidebar-menu-link" target="_blank">
-              <i data-lucide="compass"></i>
-              <span>Home 2 (Slot Radar)</span>
-            </a>
-          </li>
-          <li class="sidebar-menu-item">
-            <a href="contact.html" class="sidebar-menu-link" target="_blank">
-              <i data-lucide="phone-call"></i>
-              <span>Contact Desk</span>
-            </a>
-          </li>
           <li class="sidebar-menu-item mt-2">
             <a href="#" class="sidebar-menu-link text-danger btn-logout-action">
               <i data-lucide="log-out" class="text-danger"></i>
@@ -398,28 +380,28 @@
 
           <div class="card border-0 shadow-sm p-4">
             <h5 class="fw-bold mb-3">Standard Passport Dossier Requirements</h5>
-            <div class="row g-3">
-              <div class="col-md-6">
-                <div class="p-3 rounded-3 border bg-light">
-                  <h6 class="fw-bold text-dark"><i data-lucide="check" class="text-success me-1"></i> Identity Proof</h6>
+            <div class="row g-3 align-items-stretch">
+              <div class="col-md-6 d-flex">
+                <div class="p-3 rounded-3 border bg-light w-100 dossier-req-card">
+                  <h6 class="fw-bold text-dark mb-2"><i data-lucide="check" class="text-success me-1"></i> Identity Proof</h6>
                   <p class="small text-muted mb-0">Aadhaar card with full 12 digits visible and validated digital signature or Voter ID.</p>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="p-3 rounded-3 border bg-light">
-                  <h6 class="fw-bold text-dark"><i data-lucide="check" class="text-success me-1"></i> Address Proof</h6>
+              <div class="col-md-6 d-flex">
+                <div class="p-3 rounded-3 border bg-light w-100 dossier-req-card">
+                  <h6 class="fw-bold text-dark mb-2"><i data-lucide="check" class="text-success me-1"></i> Address Proof</h6>
                   <p class="small text-muted mb-0">Electricity bill or running bank passbook statement with entries in the last 3 months.</p>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="p-3 rounded-3 border bg-light">
-                  <h6 class="fw-bold text-dark"><i data-lucide="check" class="text-success me-1"></i> Date of Birth Proof</h6>
+              <div class="col-md-6 d-flex">
+                <div class="p-3 rounded-3 border bg-light w-100 dossier-req-card">
+                  <h6 class="fw-bold text-dark mb-2"><i data-lucide="check" class="text-success me-1"></i> Date of Birth Proof</h6>
                   <p class="small text-muted mb-0">Certified municipal birth certificate or 10th CBSE/ICSE board marksheet.</p>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="p-3 rounded-3 border bg-light">
-                  <h6 class="fw-bold text-dark"><i data-lucide="check" class="text-success me-1"></i> Annexure E Affidavit</h6>
+              <div class="col-md-6 d-flex">
+                <div class="p-3 rounded-3 border bg-light w-100 dossier-req-card">
+                  <h6 class="fw-bold text-dark mb-2"><i data-lucide="check" class="text-success me-1"></i> Annexure E Affidavit</h6>
                   <p class="small text-muted mb-0">Self-declaration on plain paper confirming citizenship and no pending legal warrants.</p>
                 </div>
               </div>
@@ -494,8 +476,8 @@
                     </select>
                   </div>
 
-                  <button type="submit" class="btn btn-navy w-100 py-2 fw-bold">
-                    <i data-lucide="calendar-plus" class="me-1" style="width:16px;height:16px;"></i>
+                  <button type="submit" id="btnSubmitAppointment" class="btn btn-navy w-100 py-2 fw-bold d-flex align-items-center justify-content-center text-center">
+                    <i data-lucide="calendar-plus" class="me-2" style="width:16px;height:16px;"></i>
                     <span>Submit Appointment Assistance Request</span>
                   </button>
 
@@ -596,7 +578,7 @@
                     <textarea class="form-control" id="profileAddress" rows="2">Suite 402, Highline Residency, Bandra West, Mumbai 400050</textarea>
                   </div>
 
-                  <button type="submit" class="btn btn-navy">
+                  <button type="submit" id="btnSaveProfile" class="btn btn-navy d-inline-flex align-items-center justify-content-center text-center">
                     <span>Save Profile Changes</span>
                   </button>
 
@@ -625,7 +607,7 @@
                     <input type="password" class="form-control" id="confirmNewPassword" placeholder="••••••••" required>
                   </div>
 
-                  <button type="submit" class="btn btn-outline-navy w-100">
+                  <button type="submit" id="btnUpdatePassword" class="btn btn-outline-navy w-100 d-flex align-items-center justify-content-center text-center">
                     <span>Update Password</span>
                   </button>
 

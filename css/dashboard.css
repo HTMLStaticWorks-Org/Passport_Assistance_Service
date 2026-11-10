@@ -115,11 +115,33 @@ body.dashboard-body {
 }
 
 [data-theme="dark"] .form-control,
-[data-theme="dark"] .form-select,
 [data-theme="dark"] textarea {
   background-color: #050505 !important;
   color: #FFFFFF !important;
   border: 1px solid #282828 !important;
+}
+
+[data-theme="dark"] .form-select,
+[data-theme="dark"] select.form-select,
+[data-theme="dark"] select {
+  background-color: #050505 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #333333 !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2.6' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 0.85rem center !important;
+  background-size: 16px 12px !important;
+  padding-right: 2.5rem !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+}
+
+[data-theme="dark"][dir="rtl"] .form-select,
+[data-theme="dark"][dir="rtl"] select.form-select,
+[dir="rtl"] [data-theme="dark"] .form-select {
+  background-position: left 0.85rem center !important;
+  padding-right: 0.85rem !important;
+  padding-left: 2.5rem !important;
 }
 
 [data-theme="dark"] .form-label,
@@ -823,8 +845,115 @@ body.dashboard-body {
 }
 
 [data-theme="dark"] .badge-doc-type,
-[data-theme="dark"] .badge.bg-secondary-subtle {
-  background-color: #141414 !important;
+[data-theme="dark"] .badge.badge-doc-type,
+[data-theme="dark"] .badge.bg-secondary-subtle,
+[data-theme="dark"] .badge.bg-primary-subtle {
+  background-color: #111E38 !important;
   color: #38BDF8 !important; /* Vivid sky blue */
-  border: 1px solid #282828 !important;
+  border: 1px solid #1E40AF !important;
+  font-weight: 700 !important;
+}
+
+/* 30. Upload Page File Icons in Dark Theme */
+[data-theme="dark"] .file-type-icon {
+  background-color: #181818 !important;
+  color: #FBBF24 !important;
+  border: 1px solid #333333 !important;
+}
+
+[data-theme="dark"] .uploaded-file-item {
+  background-color: #0A0A0A !important;
+  border-color: #262626 !important;
+}
+
+[data-theme="dark"] .uploaded-file-item .badge.bg-light {
+  background-color: #181818 !important;
+  color: #CBD5E1 !important;
+  border: 1px solid #333333 !important;
+}
+
+/* 31. Document Checklist Dossier Cards Equal Height */
+.dossier-req-card {
+  height: 100% !important;
+  min-height: 110px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  box-sizing: border-box !important;
+}
+
+[data-theme="dark"] .dossier-req-card {
+  background-color: #0A0A0A !important;
+  border-color: #262626 !important;
+}
+
+/* 32 & 35. Middle Centered Button Text */
+#btnSubmitAppointment,
+#appointmentHelpForm button[type="submit"],
+#btnSaveProfile,
+#btnUpdatePassword,
+#profileEditorForm button[type="submit"],
+#changePasswordForm button[type="submit"] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  gap: 0.5rem !important;
+}
+
+#btnSubmitAppointment span,
+#appointmentHelpForm button[type="submit"] span,
+#btnSaveProfile span,
+#btnUpdatePassword span {
+  display: inline-block !important;
+  text-align: center !important;
+}
+
+/* 34. Notifications High Contrast in Dark Theme */
+.notification-item.is-read {
+  background-color: #FFFFFF;
+  border-color: #E2E8F0;
+}
+
+.notification-item.is-unread {
+  background-color: #EFF6FF;
+  border-color: #BFDBFE;
+}
+
+[data-theme="dark"] .notification-item.is-read {
+  background-color: #0A0A0A !important;
+  border-color: #222222 !important;
+}
+
+[data-theme="dark"] .notification-item.is-read .notif-title,
+[data-theme="dark"] .notification-item.is-read h6 {
+  color: #F1F5F9 !important;
+}
+
+[data-theme="dark"] .notification-item.is-read .notif-text,
+[data-theme="dark"] .notification-item.is-read p,
+[data-theme="dark"] .notification-item.is-read .notif-time,
+[data-theme="dark"] .notification-item.is-read small {
+  color: #94A3B8 !important;
+}
+
+[data-theme="dark"] .notification-item.is-unread,
+[data-theme="dark"] .bg-primary-subtle {
+  background-color: #0B1E38 !important; /* Deep dark navy */
+  border: 1px solid #1E40AF !important;
+}
+
+[data-theme="dark"] .notification-item.is-unread .notif-title,
+[data-theme="dark"] .notification-item.is-unread h6 {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .notification-item.is-unread .notif-text,
+[data-theme="dark"] .notification-item.is-unread p {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .notification-item.is-unread .notif-time,
+[data-theme="dark"] .notification-item.is-unread small {
+  color: #93C5FD !important;
 }

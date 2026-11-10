@@ -376,7 +376,7 @@ function renderApplicationsList() {
       <div class="card border-0 shadow-sm p-4">
         <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
           <div>
-            <span class="badge bg-primary-subtle text-primary border border-primary-subtle mb-1">${recent.type}</span>
+            <span class="badge badge-doc-type mb-1">${recent.type}</span>
             <h4 class="mb-0 fw-bold">${recent.ref} - ${recent.applicantName}</h4>
             <div class="small text-muted mt-1">Submitted on ${recent.submissionDate} | Assigned: <strong>${recent.caseworker}</strong></div>
           </div>
@@ -850,7 +850,7 @@ function renderNotifications() {
 
   notificationsList.forEach(n => {
     const item = document.createElement('div');
-    item.className = `p-3 rounded-3 mb-2 border ${n.read ? 'bg-white' : 'bg-primary-subtle border-primary-subtle'}`;
+    item.className = `notification-item p-3 rounded-3 mb-2 border ${n.read ? 'is-read' : 'is-unread'}`;
 
     let iconName = 'bell';
     if (n.category === 'verification') iconName = 'shield-check';
@@ -865,10 +865,10 @@ function renderNotifications() {
         </div>
         <div class="flex-grow-1">
           <div class="d-flex justify-content-between align-items-center mb-1">
-            <h6 class="fw-bold mb-0 text-dark" style="font-size:0.95rem;">${n.title}</h6>
-            <small class="text-muted">${n.time}</small>
+            <h6 class="fw-bold mb-0 notif-title" style="font-size:0.95rem;">${n.title}</h6>
+            <small class="notif-time text-muted">${n.time}</small>
           </div>
-          <p class="mb-0 small text-muted">${n.message}</p>
+          <p class="mb-0 small notif-text text-muted">${n.message}</p>
         </div>
       </div>
     `;

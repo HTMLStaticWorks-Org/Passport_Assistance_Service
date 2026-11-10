@@ -966,8 +966,10 @@ img, video {
 }
 
 /* Responsive Public Header Rule:
-   At <= 1024px, show ONLY logo and hamburger menu on single row. */
-@media (max-width: 1024px) {
+   At <= 1199px (Mobile, 768px tablet, 1024px iPad Pro), show clean logo & hamburger toggler on single row. */
+@media (max-width: 1199.98px) {
+  .navbar-expand-xl > .container,
+  .navbar-expand-xl > .container-fluid,
   .navbar-expand-lg > .container,
   .navbar-expand-lg > .container-fluid {
     display: flex;
@@ -977,14 +979,25 @@ img, video {
   }
 
   .navbar-toggler {
-    display: block;
-    padding: 0.5rem 0.75rem;
-    border: 1px solid var(--border-color);
-    background-color: var(--bg-card);
-    border-radius: 8px;
-    color: var(--primary-navy);
-    font-size: 1.15rem;
-    box-shadow: var(--shadow-sm);
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    padding: 0 !important;
+    border: 1px solid var(--border-color) !important;
+    background-color: var(--bg-card) !important;
+    border-radius: 8px !important;
+    color: var(--primary-navy) !important;
+    font-size: 1.15rem !important;
+    box-shadow: var(--shadow-sm) !important;
+    cursor: pointer !important;
+  }
+
+  [data-theme="dark"] .navbar-toggler {
+    background-color: #111111 !important;
+    border: 1px solid #333333 !important;
+    color: #FFFFFF !important;
   }
 
   .navbar-collapse {
@@ -992,40 +1005,144 @@ img, video {
     top: 100%;
     left: 0;
     right: 0;
-    background: #FFFFFF;
-    border-bottom: 2px solid var(--border-color);
-    box-shadow: var(--shadow-xl);
-    padding: 1.25rem 1.5rem;
+    background: #FFFFFF !important;
+    border-bottom: 2px solid var(--border-color) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12) !important;
+    padding: 1.25rem 1.5rem !important;
+    z-index: 1050;
+    border-radius: 0 0 14px 14px;
+  }
+
+  [data-theme="dark"] .navbar-collapse {
+    background: #0A0A0A !important;
+    border: 1px solid #222222 !important;
+    border-top: none !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8) !important;
   }
 
   .navbar-nav {
-    gap: 0.5rem;
-    margin-bottom: 1.25rem;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.4rem !important;
+    margin-bottom: 1.25rem !important;
+    width: 100% !important;
   }
 
+  .navbar-nav .nav-item {
+    width: 100% !important;
+  }
+
+  .navbar-nav .nav-link-custom {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0.75rem 1rem !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    color: #0A192F !important;
+    background: transparent !important;
+    border: 1px solid transparent !important;
+    transition: all 0.2s ease !important;
+    width: 100% !important;
+  }
+
+  .navbar-nav .nav-link-custom:hover,
+  .navbar-nav .nav-link-custom:focus {
+    background-color: #F8FAFC !important;
+    color: #B38600 !important;
+    border-color: #E2E8F0 !important;
+  }
+
+  .navbar-nav .nav-link-custom.active {
+    background-color: rgba(212, 175, 55, 0.1) !important;
+    color: #B38600 !important;
+    border-color: rgba(212, 175, 55, 0.3) !important;
+    font-weight: 700 !important;
+  }
+
+  /* Dark theme text and backgrounds for hamburger links */
+  [data-theme="dark"] .navbar-nav .nav-link-custom {
+    color: #FFFFFF !important;
+  }
+
+  [data-theme="dark"] .navbar-nav .nav-link-custom:hover,
+  [data-theme="dark"] .navbar-nav .nav-link-custom:focus {
+    background-color: #161616 !important;
+    color: #FBBF24 !important;
+    border-color: #282828 !important;
+  }
+
+  [data-theme="dark"] .navbar-nav .nav-link-custom.active {
+    background-color: #181408 !important;
+    color: #FBBF24 !important;
+    border-color: #78350F !important;
+  }
+
+  /* Submenu dropdown inside mobile hamburger */
+  .navbar-custom .dropdown-menu {
+    position: static !important;
+    float: none !important;
+    width: 100% !important;
+    margin-top: 0.35rem !important;
+    background-color: #F8FAFC !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 8px !important;
+    padding: 0.5rem !important;
+    box-shadow: none !important;
+  }
+
+  [data-theme="dark"] .navbar-custom .dropdown-menu {
+    background-color: #121212 !important;
+    border: 1px solid #282828 !important;
+  }
+
+  .navbar-custom .dropdown-item {
+    border-radius: 6px !important;
+    padding: 0.6rem 0.85rem !important;
+    color: #0A192F !important;
+  }
+
+  [data-theme="dark"] .navbar-custom .dropdown-item {
+    color: #FFFFFF !important;
+  }
+
+  [data-theme="dark"] .navbar-custom .dropdown-item:hover {
+    background-color: #1F1F1F !important;
+    color: #FBBF24 !important;
+  }
+
+  /* Action bar inside mobile hamburger */
   .nav-header-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    width: 100%;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border-color);
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.65rem !important;
+    width: 100% !important;
+    padding-top: 1rem !important;
+    border-top: 1px solid #E2E8F0 !important;
   }
 
-  .nav-header-actions .btn {
-    width: 100%;
-    justify-content: center;
+  [data-theme="dark"] .nav-header-actions {
+    border-top: 1px solid #222222 !important;
   }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1200px) {
   .navbar-toggler {
-    display: none;
+    display: none !important;
   }
   .navbar-collapse {
     display: flex !important;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center !important;
+    justify-content: space-between !important;
+    position: static !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
   }
 }
 
