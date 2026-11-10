@@ -937,11 +937,22 @@ img, video {
 
 /* Dropdown styling */
 .navbar-custom .dropdown-menu {
+  display: none;
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-lg);
   border-radius: 12px;
   padding: 0.5rem;
   min-width: 230px;
+}
+
+.navbar-custom .dropdown-menu.show {
+  display: block !important;
+}
+
+@media (min-width: 1200px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block !important;
+  }
 }
 
 .navbar-custom .dropdown-item {
@@ -1088,6 +1099,7 @@ img, video {
 
   /* Submenu dropdown inside mobile hamburger */
   .navbar-custom .dropdown-menu {
+    display: none;
     position: static !important;
     float: none !important;
     width: 100% !important;
@@ -1097,6 +1109,10 @@ img, video {
     border-radius: 8px !important;
     padding: 0.5rem !important;
     box-shadow: none !important;
+  }
+
+  .navbar-custom .dropdown-menu.show {
+    display: block !important;
   }
 
   [data-theme="dark"] .navbar-custom .dropdown-menu {
