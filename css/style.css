@@ -1000,7 +1000,13 @@ img, video {
     color: #FFFFFF !important;
   }
 
-  .navbar-collapse {
+  .navbar-collapse:not(.show) {
+    display: none !important;
+  }
+
+  .navbar-collapse.show,
+  .navbar-collapse.collapsing {
+    display: block !important;
     position: absolute;
     top: 100%;
     left: 0;
@@ -1013,7 +1019,8 @@ img, video {
     border-radius: 0 0 14px 14px;
   }
 
-  [data-theme="dark"] .navbar-collapse {
+  [data-theme="dark"] .navbar-collapse.show,
+  [data-theme="dark"] .navbar-collapse.collapsing {
     background: #0A0A0A !important;
     border: 1px solid #222222 !important;
     border-top: none !important;
@@ -3207,4 +3214,126 @@ a.footer-contact-link:hover {
 .dropdown-toggle::after {
   display: none !important;
   content: none !important;
+}
+
+/* ==========================================================================
+   RESPONSIVE ENHANCEMENTS (ITEMS 39, 40, 41, 42, 43)
+   ========================================================================== */
+
+/* 39. Home 1 Service Cards in <= 1024px: Timeline on top, Button full width below */
+@media (max-width: 1024px) {
+  .service-card-meta {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+  }
+  .service-card-meta .btn {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}
+
+/* 40. Mobile Typography & Section Spacing for Both Home Pages */
+@media (max-width: 767.98px) {
+  .hero-section {
+    padding: 6rem 0 3.5rem !important;
+  }
+  .hero-title,
+  .hero-section h1 {
+    font-size: 1.85rem !important;
+    line-height: 1.25 !important;
+  }
+  .hero-desc {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+  }
+  .section-title {
+    font-size: 1.6rem !important;
+    line-height: 1.25 !important;
+  }
+  .section-subtitle {
+    font-size: 0.8rem !important;
+  }
+  .section-desc {
+    font-size: 0.9rem !important;
+  }
+  .cta-banner-section {
+    padding: 3rem 0 !important;
+  }
+  .cta-banner-card {
+    padding: 1.75rem 1.25rem !important;
+    border-radius: 16px !important;
+  }
+  .cta-banner-card h2 {
+    font-size: 1.5rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0.75rem !important;
+  }
+  .cta-banner-card p.fs-5,
+  .cta-banner-card p {
+    font-size: 0.92rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 1.25rem !important;
+  }
+  .cta-banner-card .btn-lg {
+    font-size: 0.92rem !important;
+    padding: 0.65rem 1.25rem !important;
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* 41. Home 2 Hero Heading Responsive Scaling */
+.hero-title-radar {
+  font-size: 2.85rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+@media (max-width: 991.98px) {
+  .hero-title-radar {
+    font-size: 2.1rem !important;
+    line-height: 1.2 !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-title-radar {
+    font-size: 1.65rem !important;
+    line-height: 1.25 !important;
+  }
+}
+
+/* 42. Home 2 City Slot Cards Equal Height in 768px and 1024px */
+.city-slot-card {
+  height: 100% !important;
+  min-height: 96px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  box-sizing: border-box !important;
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .city-slot-card {
+    min-height: 105px !important;
+    padding: 1rem 1.25rem !important;
+  }
+}
+
+/* 43. Service Page Image Mobile Fit */
+@media (max-width: 767.98px) {
+  .service-detail-card {
+    padding: 1.25rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .service-detail-img {
+    height: 200px !important;
+    max-height: 220px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    margin-bottom: 1rem !important;
+  }
 }

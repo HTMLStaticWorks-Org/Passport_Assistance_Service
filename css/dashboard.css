@@ -701,26 +701,120 @@ body.dashboard-body {
   }
 
   .dashboard-topbar {
-    padding: 0 1.25rem;
+    padding: 0.75rem 1.25rem !important;
+    height: auto !important;
+    min-height: 60px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0.75rem !important;
+  }
+
+  .topbar-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+  }
+
+  .dashboard-topbar .nav-pill-btn {
+    height: 34px !important;
+    min-height: 34px !important;
+    padding: 0.25rem 0.75rem !important;
+    font-size: 0.82rem !important;
   }
 
   .dashboard-content-body {
     padding: 1.25rem;
   }
-
-  .pipeline-step-label {
-    display: none;
-  }
 }
 
 @media (max-width: 768px) {
+  /* 45. Arrange 5-Step Pipeline Progress Tracker Properly Vertically */
   .pipeline-steps-container {
-    overflow-x: auto;
-    padding-bottom: 0.5rem;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1.25rem !important;
+    position: relative !important;
+    padding-left: 1.5rem !important;
+    margin: 1.5rem 0 !important;
+    width: 100% !important;
   }
+
+  .pipeline-steps-container::before {
+    top: 18px !important;
+    bottom: 18px !important;
+    left: 41px !important;
+    width: 3px !important;
+    height: auto !important;
+    right: auto !important;
+  }
+
+  .pipeline-progress-bar {
+    top: 18px !important;
+    left: 41px !important;
+    width: 3px !important;
+    height: 60% !important;
+    right: auto !important;
+  }
+
+  .pipeline-step-node {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    text-align: left !important;
+    width: 100% !important;
+  }
+
+  .pipeline-step-circle {
+    flex-shrink: 0 !important;
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 0.82rem !important;
+  }
+
   .pipeline-step-label {
-    display: block;
-    font-size: 0.68rem;
+    display: block !important;
+    margin-top: 0 !important;
+    max-width: none !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+  }
+}
+
+@media (max-width: 640px) {
+  /* 46. Responsive Layout for Uploaded Assistance Files on Mobile */
+  .uploaded-file-item {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+    padding: 1rem !important;
+    width: 100% !important;
+  }
+
+  .uploaded-file-info {
+    width: 100% !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 0.85rem !important;
+  }
+
+  .uploaded-file-info > div:last-child {
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+
+  .uploaded-file-item .d-flex.align-items-center.gap-2 {
+    width: 100% !important;
+    justify-content: space-between !important;
+    padding-top: 0.65rem !important;
+    border-top: 1px dashed #E2E8F0 !important;
+  }
+
+  [data-theme="dark"] .uploaded-file-item .d-flex.align-items-center.gap-2 {
+    border-top-color: #262626 !important;
   }
 }
 
