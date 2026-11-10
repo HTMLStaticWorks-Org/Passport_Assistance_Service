@@ -702,3 +702,129 @@ body.dashboard-body {
   }
 }
 
+
+
+/* ==========================================================================
+   USER REFINEMENTS (POINTS 26, 27, 28, 29)
+   ========================================================================== */
+
+/* 26. Sidebar Menu Background Color WHITE in Light Theme */
+:root:not([data-theme="dark"]) .dashboard-sidebar {
+  background-color: #FFFFFF !important;
+  color: #1E293B !important;
+  border-right: 1px solid #E2E8F0 !important;
+}
+
+:root:not([data-theme="dark"]) .sidebar-header {
+  border-bottom: 1px solid #E2E8F0 !important;
+}
+
+:root:not([data-theme="dark"]) .sidebar-brand .brand-title {
+  color: #0A192F !important;
+}
+
+:root:not([data-theme="dark"]) .sidebar-brand .brand-sub {
+  color: #64748B !important;
+}
+
+:root:not([data-theme="dark"]) .sidebar-section-title {
+  color: #94A3B8 !important;
+}
+
+:root:not([data-theme="dark"]) .sidebar-menu-link {
+  color: #334155 !important;
+}
+
+:root:not([data-theme="dark"]) .sidebar-menu-link:hover {
+  background-color: #F8FAFC !important;
+  color: #0A192F !important;
+}
+
+:root:not([data-theme="dark"]) .sidebar-menu-link.active {
+  background-color: #FDF9EE !important;
+  color: #B45309 !important;
+  font-weight: 700 !important;
+  border-left: 3px solid var(--accent-gold);
+}
+
+:root:not([data-theme="dark"]) .sidebar-footer {
+  border-top: 1px solid #E2E8F0 !important;
+}
+
+:root:not([data-theme="dark"]) .sidebar-user-card {
+  background-color: #F8FAFC !important;
+  border: 1px solid #E2E8F0 !important;
+}
+
+:root:not([data-theme="dark"]) .sidebar-user-name {
+  color: #0A192F !important;
+}
+
+:root:not([data-theme="dark"]) .sidebar-user-role {
+  color: #64748B !important;
+}
+
+/* 27. Metric Cards: Equal Height & Size Across All Four */
+.metric-card {
+  height: 100% !important;
+  min-height: 96px !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 1.25rem !important;
+  box-sizing: border-box !important;
+}
+
+#metricAppointmentStatus {
+  font-size: 1.15rem !important;
+  line-height: 1.25 !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+}
+
+/* 28. Free & Minimal Topbar Actions */
+.dashboard-topbar .topbar-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+}
+
+.dashboard-topbar .nav-pill-btn {
+  border-radius: 50px !important;
+  padding: 0.35rem 1rem !important;
+  height: 38px !important;
+  min-height: 38px !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.4rem !important;
+  border: 1.5px solid #CBD5E1 !important;
+  background-color: #FFFFFF !important;
+  color: #1E293B !important;
+  cursor: pointer !important;
+}
+
+[data-theme="dark"] .dashboard-topbar .nav-pill-btn {
+  background-color: #111111 !important;
+  border: 1.5px solid #333333 !important;
+  color: #FFFFFF !important;
+}
+
+/* 29. High Contrast Application Badges in Dark Theme */
+.badge-doc-type {
+  background-color: #EEF2F6;
+  color: #1E293B;
+  border: 1px solid #CBD5E1;
+  font-weight: 600;
+  padding: 0.35rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+[data-theme="dark"] .badge-doc-type,
+[data-theme="dark"] .badge.bg-secondary-subtle {
+  background-color: #141414 !important;
+  color: #38BDF8 !important; /* Vivid sky blue */
+  border: 1px solid #282828 !important;
+}

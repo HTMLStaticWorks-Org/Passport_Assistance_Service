@@ -436,7 +436,7 @@ function renderApplicationsList() {
         <div>
           <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
             <h5 class="fw-bold mb-0 text-dark">${app.ref}</h5>
-            <span class="badge bg-secondary-subtle text-secondary">${app.type}</span>
+            <span class="badge badge-doc-type">${app.type}</span>
           </div>
           <div class="text-muted small">Applicant: <strong>${app.applicantName}</strong> | Submitted: ${app.submissionDate}</div>
         </div>
@@ -992,10 +992,10 @@ function applyTheme(theme) {
 
   document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
     if (theme === 'dark') {
-      btn.innerHTML = '<i data-lucide="sun" style="width:18px;height:18px;"></i>';
+      btn.innerHTML = '<i data-lucide="sun" style="width:16px;height:16px;"></i><span>Light</span>';
       btn.setAttribute('title', 'Switch to Light Theme');
     } else {
-      btn.innerHTML = '<i data-lucide="moon" style="width:18px;height:18px;"></i>';
+      btn.innerHTML = '<i data-lucide="moon" style="width:16px;height:16px;"></i><span>Dark</span>';
       btn.setAttribute('title', 'Switch to Dark Theme');
     }
   });
@@ -1025,10 +1025,10 @@ function applyDirection(dir) {
 
   document.querySelectorAll('.rtl-toggle-btn').forEach(btn => {
     if (dir === 'rtl') {
-      btn.innerHTML = '<i data-lucide="arrow-left-right" style="width:18px;height:18px;"></i>';
+      btn.innerHTML = '<span>LTR</span>';
       btn.setAttribute('title', 'Switch to LTR Direction');
     } else {
-      btn.innerHTML = '<i data-lucide="languages" style="width:18px;height:18px;"></i>';
+      btn.innerHTML = '<span>RTL</span>';
       btn.setAttribute('title', 'Switch to RTL Direction');
     }
   });

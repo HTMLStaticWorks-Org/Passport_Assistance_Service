@@ -141,41 +141,25 @@
           <button class="btn-sidebar-toggle" id="sidebarToggleBtn" aria-label="Toggle navigation menu">
             <i data-lucide="menu"></i>
           </button>
-          <div class="d-none d-sm-block">
-            <h5 class="fw-bold mb-0 text-dark">Client Assistance Portal</h5>
-            <span class="small text-muted">Facilitation Reference Desk</span>
-          </div>
         </div>
 
+        <!-- Clean Free Navbar with Only RTL, Theme, and Notifications -->
         <div class="topbar-actions">
           <!-- RTL Direction Toggle -->
-          <div class="topbar-icon-btn rtl-toggle-btn" title="Toggle RTL Direction" style="cursor: pointer;">
-            <i data-lucide="languages" style="width:18px;height:18px;"></i>
-          </div>
+          <button type="button" class="btn btn-sm btn-outline-secondary nav-pill-btn rtl-toggle-btn" title="Toggle RTL Direction" aria-label="Toggle RTL Direction">
+            <span>RTL</span>
+          </button>
 
           <!-- Theme Dark/Light Toggle -->
-          <div class="topbar-icon-btn theme-toggle-btn" title="Toggle Theme" style="cursor: pointer;">
-            <i data-lucide="moon" style="width:18px;height:18px;"></i>
-          </div>
-
-          <button class="btn btn-gold btn-sm d-none d-md-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#newApplicationModal">
-            <i data-lucide="plus" style="width:16px;height:16px;"></i>
-            <span>New Assistance Request</span>
+          <button type="button" class="btn btn-sm btn-outline-secondary nav-pill-btn theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+            <i data-lucide="moon" style="width:16px;height:16px;"></i>
+            <span>Dark</span>
           </button>
 
           <!-- Notification Bell -->
           <div class="topbar-icon-btn" data-switch-tab="notifications" title="Notifications">
             <i data-lucide="bell" style="width:18px;height:18px;"></i>
             <span class="notification-dot" id="topbarNotifDot"></span>
-          </div>
-
-          <!-- User Pill -->
-          <div class="d-flex align-items-center gap-2" data-switch-tab="profile" style="cursor: pointer;">
-            <img src="imahe/agus-dietrich-eUjufrdx_bM-unsplash.jpg" alt="Aarav Sharma" class="rounded-circle border" style="width:36px;height:36px;object-fit:cover;">
-            <div class="d-none d-md-block text-start" style="line-height:1.2;">
-              <strong class="d-block text-dark small user-display-name">Aarav Sharma</strong>
-              <span class="text-muted" style="font-size:0.75rem;">Client ID #8492</span>
-            </div>
           </div>
         </div>
       </header>
@@ -188,6 +172,20 @@
              ========================================================================== -->
         <div class="dashboard-tab-pane" id="tab-overview">
           
+          <!-- Section Heading & New Assistance Request Action Bar (Moved from Navbar) -->
+          <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
+            <div>
+              <h4 class="fw-bold mb-1 text-dark">Client Assistance Portal</h4>
+              <span class="text-muted small">Facilitation Reference Desk & Active Case Manager</span>
+            </div>
+            <div>
+              <button class="btn btn-gold btn-sm d-inline-flex align-items-center gap-2 px-3 py-2" data-bs-toggle="modal" data-bs-target="#newApplicationModal">
+                <i data-lucide="plus-circle" style="width:16px;height:16px;"></i>
+                <span>New Assistance Request</span>
+              </button>
+            </div>
+          </div>
+
           <!-- Welcome Banner -->
           <div class="card border-0 shadow-sm p-4 mb-4" style="background: var(--navy-gradient); color: #FFF; border-radius: 16px;">
             <div class="row align-items-center g-3">
@@ -251,7 +249,7 @@
                   <i data-lucide="calendar-check"></i>
                 </div>
                 <div>
-                  <div class="metric-value text-success" id="metricAppointmentStatus">Slot Confirmed</div>
+                  <div class="metric-value text-success fs-6 fw-bold text-nowrap" id="metricAppointmentStatus" style="font-size:1.15rem !important; line-height:1.2;">Slot Confirmed</div>
                   <div class="metric-title">Appointment Status</div>
                 </div>
               </div>
