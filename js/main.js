@@ -119,34 +119,31 @@ function initDropdownHandler() {
  * Update Navbar based on logged in state
  */
 function updateNavbarAuthState() {
-  const activeUser = localStorage.getItem('passportease_user');
   const authNavContainer = document.getElementById('navAuthActions');
   if (!authNavContainer) return;
 
   const currentTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
   const currentDir = document.documentElement.getAttribute('dir') === 'rtl' ? 'rtl' : 'ltr';
 
-  if (activeUser) {
-    try {
-      const user = JSON.parse(activeUser);
-      authNavContainer.innerHTML = `
-        <button class="btn btn-outline-secondary nav-icon-btn rtl-toggle-btn" title="${currentDir === 'rtl' ? 'Switch to LTR Direction' : 'Switch to RTL Direction'}" aria-label="Toggle RTL Direction">
-          <i data-lucide="languages"></i>
-        </button>
-        <button class="btn btn-outline-secondary nav-icon-btn theme-toggle-btn" title="${currentTheme === 'dark' ? 'Switch to Light Theme' : 'Switch to Dark Theme'}" aria-label="Toggle Theme">
-          <i data-lucide="${currentTheme === 'dark' ? 'sun' : 'moon'}"></i>
-        </button>
-        <button class="btn btn-outline-secondary nav-icon-btn track-app-btn" data-bs-toggle="modal" data-bs-target="#trackApplicationModal" title="Track Application" aria-label="Track Application">
-          <i data-lucide="crosshair"></i>
-        </button>
-        <a href="dashboard.html" class="btn btn-navy nav-icon-btn nav-login-btn" title="Dashboard (${user.fullName || 'Client'})" aria-label="Dashboard">
-          <i data-lucide="layout-dashboard"></i>
-        </a>
-      `;
-      if (typeof lucide !== 'undefined') lucide.createIcons();
-      attachThemeAndRtlListeners();
-    } catch(e) {}
-  }
+  // Always keep the Client Login CTA linking to auth.html (never replace with dashboard button)
+  authNavContainer.innerHTML = `
+    <button class="btn btn-outline-secondary nav-pill-btn rtl-toggle-btn" title="${currentDir === 'rtl' ? 'Switch to LTR Direction' : 'Switch to RTL Direction'}" aria-label="Toggle RTL Direction">
+      <span>${currentDir === 'rtl' ? 'LTR' : 'RTL'}</span>
+    </button>
+    <button class="btn btn-outline-secondary nav-pill-btn theme-toggle-btn" title="${currentTheme === 'dark' ? 'Switch to Light Theme' : 'Switch to Dark Theme'}" aria-label="Toggle Theme">
+      <i data-lucide="${currentTheme === 'dark' ? 'sun' : 'moon'}" style="width:16px;height:16px;"></i>
+      <span>${currentTheme === 'dark' ? 'Light' : 'Dark'}</span>
+    </button>
+    <button class="btn btn-outline-secondary nav-icon-btn track-app-btn" data-bs-toggle="modal" data-bs-target="#trackApplicationModal" title="Track Application" aria-label="Track Application">
+      <i data-lucide="crosshair"></i>
+    </button>
+    <a href="auth.html" class="btn btn-navy nav-icon-btn nav-login-btn" title="Client Login" aria-label="Client Login">
+      <i data-lucide="lock"></i>
+    </a>
+  `;
+
+  if (typeof lucide !== 'undefined') lucide.createIcons();
+  attachThemeAndRtlListeners();
 }
 
 /**

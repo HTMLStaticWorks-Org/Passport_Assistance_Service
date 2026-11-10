@@ -3079,3 +3079,15 @@ a.footer-contact-link:hover {
 [data-theme="dark"] .auth-top-actions {
   border-bottom-color: #222222 !important;
 }
+
+
+/* ==========================================================================
+   FIX FOR DOUBLE ARROW ON HOME DROPDOWN (REMOVE BOOTSTRAP ::after TRIANGLE)
+   ========================================================================== */
+.navbar-custom .dropdown-toggle::after,
+.nav-link-custom.dropdown-toggle::after,
+.nav-link.dropdown-toggle::after,
+.dropdown-toggle::after {
+  display: none !important;
+  content: none !important;
+}
