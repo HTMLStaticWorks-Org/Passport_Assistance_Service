@@ -131,13 +131,17 @@ function updateNavbarAuthState() {
       const user = JSON.parse(activeUser);
       authNavContainer.innerHTML = `
         <button class="btn btn-outline-secondary nav-icon-btn rtl-toggle-btn" title="${currentDir === 'rtl' ? 'Switch to LTR Direction' : 'Switch to RTL Direction'}" aria-label="Toggle RTL Direction">
-          <i data-lucide="${currentDir === 'rtl' ? 'arrow-left-right' : 'languages'}"></i>
+          <i data-lucide="languages"></i>
         </button>
         <button class="btn btn-outline-secondary nav-icon-btn theme-toggle-btn" title="${currentTheme === 'dark' ? 'Switch to Light Theme' : 'Switch to Dark Theme'}" aria-label="Toggle Theme">
           <i data-lucide="${currentTheme === 'dark' ? 'sun' : 'moon'}"></i>
         </button>
-        <button class="btn btn-outline-navy nav-icon-btn" data-bs-toggle="modal" data-bs-target="#trackApplicationModal" title="Track Application" aria-label="Track Application"><i data-lucide="search"></i></button>
-        <a href="dashboard.html" class="btn btn-gold nav-login-btn" title="Dashboard" aria-label="Dashboard"><i data-lucide="layout-dashboard" style="width:16px;height:16px;"></i><span class="d-none d-sm-inline">Dashboard</span></a>
+        <button class="btn btn-outline-secondary nav-icon-btn track-app-btn" data-bs-toggle="modal" data-bs-target="#trackApplicationModal" title="Track Application" aria-label="Track Application">
+          <i data-lucide="crosshair"></i>
+        </button>
+        <a href="dashboard.html" class="btn btn-navy nav-icon-btn nav-login-btn" title="Dashboard (${user.fullName || 'Client'})" aria-label="Dashboard">
+          <i data-lucide="layout-dashboard"></i>
+        </a>
       `;
       if (typeof lucide !== 'undefined') lucide.createIcons();
       attachThemeAndRtlListeners();
@@ -193,14 +197,15 @@ function applyDirection(dir) {
   }
 
   document.querySelectorAll('.rtl-toggle-btn').forEach(btn => {
+    btn.innerHTML = '<i data-lucide="languages"></i>';
     if (dir === 'rtl') {
-      btn.innerHTML = '<i data-lucide="arrow-left-right"></i>';
       btn.setAttribute('title', 'Switch to LTR Direction');
       btn.setAttribute('aria-label', 'Switch to LTR Direction');
+      btn.classList.add('active');
     } else {
-      btn.innerHTML = '<i data-lucide="languages"></i>';
       btn.setAttribute('title', 'Switch to RTL Direction');
       btn.setAttribute('aria-label', 'Switch to RTL Direction');
+      btn.classList.remove('active');
     }
   });
 

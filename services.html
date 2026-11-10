@@ -35,6 +35,7 @@
   <!-- Public Sticky Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container">
+      <!-- Clickable Logo -->
       <a class="navbar-brand navbar-brand-wrapper" href="index.html">
         <div class="brand-icon-box">
           <i data-lucide="file-badge"></i>
@@ -46,55 +47,50 @@
       </a>
 
       <!-- Hamburger Toggler (Single row on mobile & tablet <= 1024px) -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarServicesContent" aria-controls="navbarServicesContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPublicContent" aria-controls="navbarPublicContent" aria-expanded="false" aria-label="Toggle navigation">
         <i data-lucide="menu" style="width:24px;height:24px;"></i>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarServicesContent">
+      <!-- Nav Links & CTA Actions in Strict Straight Single Row -->
+      <div class="collapse navbar-collapse" id="navbarPublicContent">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown">
-            <a class="nav-link nav-link-custom dropdown-toggle d-inline-flex align-items-center gap-1" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link nav-link-custom dropdown-toggle  d-inline-flex align-items-center gap-1" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <span>Home</span>
               <i data-lucide="chevron-down" style="width:14px;height:14px;margin-left:2px;"></i>
             </a>
             <ul class="dropdown-menu shadow-lg border-0" aria-labelledby="homeDropdown">
-              <li><a class="dropdown-item" href="index.html"><i data-lucide="layout" class="me-2 text-warning" style="width:16px;height:16px;"></i> Home 1 (Classic Facilitation)</a></li>
-              <li><a class="dropdown-item" href="home-2.html"><i data-lucide="calendar-search" class="me-2 text-warning" style="width:16px;height:16px;"></i> Home 2 (Live Slot Finder & Concierge)</a></li>
+              <li><a class="dropdown-item " href="index.html"><i data-lucide="layout" class="me-2 text-warning" style="width:16px;height:16px;"></i> Home 1 (Classic Facilitation)</a></li>
+              <li><a class="dropdown-item " href="home-2.html"><i data-lucide="calendar-search" class="me-2 text-warning" style="width:16px;height:16px;"></i> Home 2 (Live Slot Finder & Concierge)</a></li>
             </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link nav-link-custom active" href="services.html">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link-custom" href="checklist.html">Documents Checklist</a>
+            <a class="nav-link nav-link-custom " href="checklist.html">Documents Checklist</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link-custom" href="contact.html">Contact</a>
+            <a class="nav-link nav-link-custom " href="contact.html">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link-custom" href="dashboard.html">Dashboard</a>
+            <a class="nav-link nav-link-custom " href="dashboard.html">Dashboard</a>
           </li>
-        </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link nav-link-custom active" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="checklist.html">Documents Checklist</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html#feeCalculator">Fee Calculator</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
         </ul>
 
+        <!-- Straight Actions: 4 Icon Buttons Side-by-Side (Languages, Theme, Track App, Login) -->
         <div class="nav-header-actions" id="navAuthActions">
           <button class="btn btn-outline-secondary nav-icon-btn rtl-toggle-btn" title="Toggle RTL Direction" aria-label="Toggle RTL Direction">
-            <i data-lucide="arrow-left-right"></i>
+            <i data-lucide="languages"></i>
           </button>
           <button class="btn btn-outline-secondary nav-icon-btn theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
             <i data-lucide="moon"></i>
           </button>
-          <button class="btn btn-outline-navy nav-icon-btn" data-bs-toggle="modal" data-bs-target="#trackApplicationModal" title="Track Application" aria-label="Track Application">
-            <i data-lucide="search"></i>
+          <button class="btn btn-outline-secondary nav-icon-btn track-app-btn" data-bs-toggle="modal" data-bs-target="#trackApplicationModal" title="Track Application" aria-label="Track Application">
+            <i data-lucide="crosshair"></i>
           </button>
-          <a href="auth.html" class="btn btn-gold nav-login-btn" title="Client Login" aria-label="Client Login">
-            <i data-lucide="lock" style="width:16px;height:16px;"></i>
-            <span class="d-none d-sm-inline">Client Login</span>
+          <a href="auth.html" class="btn btn-navy nav-icon-btn nav-login-btn" title="Client Login" aria-label="Client Login">
+            <i data-lucide="lock"></i>
           </a>
         </div>
       </div>
@@ -153,10 +149,10 @@
               </div>
               <div class="col-sm-6">
                 <h6 class="fw-bold text-dark mb-2"><i data-lucide="clock" class="text-primary me-1" style="width:16px;height:16px;"></i> Estimated Timeline</h6>
-                <p class="small text-muted mb-0">
-                  <strong>Normal:</strong> 15 - 20 Business Days<br>
-                  <strong>Pre-Verification:</strong> Completed within 48h
-                </p>
+                <ul class="small text-muted ps-3 mb-0">
+                  <li><strong>Normal Track:</strong> 15 - 20 Business Days</li>
+                  <li><strong>Pre-Verification:</strong> Completed within 48h</li>
+                </ul>
               </div>
             </div>
 
@@ -211,10 +207,10 @@
               </div>
               <div class="col-sm-6">
                 <h6 class="fw-bold text-dark mb-2"><i data-lucide="clock" class="text-primary me-1" style="width:16px;height:16px;"></i> Estimated Timeline</h6>
-                <p class="small text-muted mb-0">
-                  <strong>Normal Track:</strong> 10 - 15 Business Days<br>
-                  <strong>Tatkal Re-issue:</strong> 3 - 5 Business Days
-                </p>
+                <ul class="small text-muted ps-3 mb-0">
+                  <li><strong>Normal Track:</strong> 10 - 15 Business Days</li>
+                  <li><strong>Tatkal Re-issue:</strong> 3 - 5 Business Days</li>
+                </ul>
               </div>
             </div>
 
@@ -268,11 +264,11 @@
                 </ul>
               </div>
               <div class="col-sm-6">
-                <h6 class="fw-bold text-dark mb-2"><i data-lucide="zap" class="text-danger me-1" style="width:16px;height:16px;"></i> Fast-Track Speed</h6>
-                <p class="small text-muted mb-0">
-                  <strong>Dispatch:</strong> 3 - 5 Business Days<br>
-                  <strong>Slot Confirmed:</strong> Within 24 - 48 Hours
-                </p>
+                <h6 class="fw-bold text-dark mb-2"><i data-lucide="clock" class="text-danger me-1" style="width:16px;height:16px;"></i> Estimated Timeline</h6>
+                <ul class="small text-muted ps-3 mb-0">
+                  <li><strong>Dispatch:</strong> 3 - 5 Business Days</li>
+                  <li><strong>Slot Confirmed:</strong> Within 24 - 48 Hours</li>
+                </ul>
               </div>
             </div>
 
@@ -326,11 +322,11 @@
                 </ul>
               </div>
               <div class="col-sm-6">
-                <h6 class="fw-bold text-dark mb-2"><i data-lucide="clock" class="text-primary me-1" style="width:16px;height:16px;"></i> Case Timeline</h6>
-                <p class="small text-muted mb-0">
-                  <strong>Estimated:</strong> 20 - 30 Business Days<br>
-                  (Requires mandatory prior police verification)
-                </p>
+                <h6 class="fw-bold text-dark mb-2"><i data-lucide="clock" class="text-primary me-1" style="width:16px;height:16px;"></i> Estimated Timeline</h6>
+                <ul class="small text-muted ps-3 mb-0">
+                  <li><strong>Estimated:</strong> 20 - 30 Business Days</li>
+                  <li><strong>Police Verification:</strong> Mandatory prior clearance</li>
+                </ul>
               </div>
             </div>
 
@@ -385,11 +381,11 @@
                 </ul>
               </div>
               <div class="col-sm-6">
-                <h6 class="fw-bold text-dark mb-2"><i data-lucide="clock" class="text-primary me-1" style="width:16px;height:16px;"></i> Processing Timeline</h6>
-                <p class="small text-muted mb-0">
-                  <strong>Estimated:</strong> 15 - 22 Business Days<br>
-                  (Includes statutory gazette/affidavit review)
-                </p>
+                <h6 class="fw-bold text-dark mb-2"><i data-lucide="clock" class="text-primary me-1" style="width:16px;height:16px;"></i> Estimated Timeline</h6>
+                <ul class="small text-muted ps-3 mb-0">
+                  <li><strong>Estimated:</strong> 15 - 22 Business Days</li>
+                  <li><strong>Review:</strong> Includes statutory gazette & affidavit review</li>
+                </ul>
               </div>
             </div>
 
@@ -444,10 +440,10 @@
               </div>
               <div class="col-sm-6">
                 <h6 class="fw-bold text-dark mb-2"><i data-lucide="clock" class="text-primary me-1" style="width:16px;height:16px;"></i> Estimated Timeline</h6>
-                <p class="small text-muted mb-0">
-                  <strong>Estimated:</strong> 12 - 18 Business Days<br>
-                  (Often exempt from physical police verification)
-                </p>
+                <ul class="small text-muted ps-3 mb-0">
+                  <li><strong>Estimated:</strong> 12 - 18 Business Days</li>
+                  <li><strong>Verification:</strong> Often exempt from physical police verification</li>
+                </ul>
               </div>
             </div>
 
@@ -501,11 +497,11 @@
                 </ul>
               </div>
               <div class="col-sm-6">
-                <h6 class="fw-bold text-dark mb-2"><i data-lucide="clock" class="text-primary me-1" style="width:16px;height:16px;"></i> Slot Availability</h6>
-                <p class="small text-muted mb-0">
-                  <strong>Normal Slots:</strong> Booked within 48h<br>
-                  <strong>Tatkal Slots:</strong> Priority same-week release
-                </p>
+                <h6 class="fw-bold text-dark mb-2"><i data-lucide="clock" class="text-primary me-1" style="width:16px;height:16px;"></i> Estimated Timeline</h6>
+                <ul class="small text-muted ps-3 mb-0">
+                  <li><strong>Normal Slots:</strong> Booked within 48 Hours</li>
+                  <li><strong>Tatkal Slots:</strong> Priority same-week quota release</li>
+                </ul>
               </div>
             </div>
 

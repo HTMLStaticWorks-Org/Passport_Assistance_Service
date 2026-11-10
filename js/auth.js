@@ -25,6 +25,55 @@ document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
   }
 
+  
+  // Setup Theme & RTL toggles on auth page
+  function setupAuthToggles() {
+    const themeBtns = document.querySelectorAll('.theme-toggle-btn');
+    const rtlBtns = document.querySelectorAll('.rtl-toggle-btn');
+
+    themeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+        const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        if (nextTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('passportease_theme', 'dark');
+          btn.innerHTML = '<i data-lucide="sun" style="width:17px;height:17px;"></i>';
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+          localStorage.setItem('passportease_theme', 'light');
+          btn.innerHTML = '<i data-lucide="moon" style="width:17px;height:17px;"></i>';
+        }
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+      });
+    });
+
+    rtlBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const currentDir = document.documentElement.getAttribute('dir') === 'rtl' ? 'rtl' : 'ltr';
+        const nextDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
+        if (nextDir === 'rtl') {
+          document.documentElement.setAttribute('dir', 'rtl');
+          document.documentElement.setAttribute('lang', 'ar');
+          localStorage.setItem('passportease_dir', 'rtl');
+        } else {
+          document.documentElement.removeAttribute('dir');
+          document.documentElement.setAttribute('lang', 'en');
+          localStorage.setItem('passportease_dir', 'ltr');
+        }
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+      });
+    });
+
+    // Update initial button icons
+    const currentTheme = localStorage.getItem('passportease_theme') || 'light';
+    themeBtns.forEach(btn => {
+      btn.innerHTML = currentTheme === 'dark' ? '<i data-lucide="sun" style="width:17px;height:17px;"></i>' : '<i data-lucide="moon" style="width:17px;height:17px;"></i>';
+    });
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+  }
+  setupAuthToggles();
+
   const tabLogin = document.getElementById('tabLoginBtn');
   const tabRegister = document.getElementById('tabRegisterBtn');
   const loginFormContainer = document.getElementById('loginFormContainer');
