@@ -1051,3 +1051,24 @@ body.dashboard-body {
 [data-theme="dark"] .notification-item.is-unread small {
   color: #93C5FD !important;
 }
+
+/* Unified Dark Theme Brand Styling */
+[data-theme="dark"] .sidebar-brand .brand-icon-box {
+  background: #0F172A !important;
+  border: 1.5px solid #F59E0B !important;
+  color: #FBBF24 !important;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.25) !important;
+}
+
+[data-theme="dark"] .sidebar-brand .brand-title {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .sidebar-brand .brand-title span {
+  color: #FBBF24 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="dark"] .sidebar-brand .brand-sub {
+  color: #94A3B8 !important;
+}

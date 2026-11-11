@@ -137,6 +137,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Social Media Authentication Buttons (Demo OAuth Simulation)
+  document.querySelectorAll('.auth-social-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const provider = btn.dataset.provider || 'Social';
+      const originalHtml = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = `<span class="spinner-border spinner-border-sm"></span><span>Connecting...</span>`;
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = originalHtml;
+        handleLoginSuccess({
+          fullName: `Aarav Sharma (${provider})`,
+          email: `client.${provider.toLowerCase()}@passportease.in`,
+          phone: '+91 98765 43210'
+        });
+      }, 500);
+    });
+  });
+
   // Handle Login Submission
   if (loginForm) {
     loginForm.addEventListener('submit', (e) => {
